@@ -1,4 +1,3 @@
-/* Hệ thống biến màu sắc động hỗ trợ cả 2 chế độ hiển thị */
 :root[data-theme="light"] {
     --primary-color: #4f46e5;
     --primary-hover: #4338ca;
@@ -20,6 +19,10 @@
     --example-bg: #f0fdf4;
     --quiz-bg: #fafafa;
     --input-bg: #ffffff;
+    --btn-audio-bg: rgba(0, 0, 0, 0.06);
+    --btn-audio-border: rgba(0, 0, 0, 0.12);
+    --btn-audio-hover: rgba(0, 0, 0, 0.12);
+    --svg-audio-color: #4a5568;
     --header-gradient: linear-gradient(135deg, #0f172a, #4f46e5);
 }
 
@@ -44,11 +47,15 @@
     --example-bg: #062f1c;
     --quiz-bg: #111827;
     --input-bg: #1f2937;
+    --btn-audio-bg: rgba(255, 255, 255, 0.1);
+    --btn-audio-border: rgba(255, 255, 255, 0.18);
+    --btn-audio-hover: rgba(255, 255, 255, 0.22);
+    --svg-audio-color: #ffffff;
     --header-gradient: linear-gradient(135deg, #030712, #1e1b4b);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.7;
@@ -79,7 +86,6 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Nút chuyển đổi giao diện - Khóa cứng ở góc phải trên cùng */
 .theme-toggle {
     position: absolute;
     top: 1rem;
@@ -116,7 +122,6 @@ header p {
     transform: rotate(180deg);
 }
 
-/* Thanh điều hướng nhanh giữa các bài học */
 .quick-nav-bar {
     background-color: var(--card-bg);
     max-width: 1000px;
@@ -173,7 +178,6 @@ header p {
     padding-bottom: 6rem;
 }
 
-/* Cấu trúc thẻ học tập (Bài học riêng biệt) */
 .unit-card {
     background-color: var(--card-bg);
     border-radius: 16px;
@@ -193,8 +197,14 @@ header p {
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .unit-title {
@@ -215,7 +225,6 @@ h3 {
     margin-bottom: 1rem;
 }
 
-/* Phần hiển thị Từ vựng (Vocabulary Grid) */
 .vocab-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -259,12 +268,11 @@ h3 {
     display: block;
 }
 
-/* Khối hiển thị ngữ pháp & Lưu ý học tập */
 .formula-box {
     background-color: var(--formula-bg);
     border-radius: 10px;
     padding: 1.2rem;
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: "Consolas", "Courier New", monospace;
     font-size: 1.05rem;
     color: var(--text-color);
     margin: 1rem 0;
@@ -296,7 +304,6 @@ h3 {
     margin: 0.25rem 0;
 }
 
-/* Các thẻ nhãn (Badges) */
 .badge {
     display: inline-block;
     padding: 0.25rem 0.6rem;
@@ -313,7 +320,6 @@ h3 {
     color: var(--accent-purple);
 }
 
-/* Hệ thống bảng thông tin có bo góc và hiển thị đường viền trong hoàn chỉnh */
 table {
     width: 100%;
     border-collapse: separate;
@@ -327,7 +333,8 @@ table {
     transition: border-color 0.3s ease;
 }
 
-th, td {
+th,
+td {
     padding: 1rem 1.25rem;
     font-size: 0.95rem;
     text-align: left;
@@ -353,11 +360,11 @@ tr:nth-child(even) td {
     background-color: var(--formula-bg);
 }
 
-td:first-child, th:first-child {
+td:first-child,
+th:first-child {
     font-weight: 600;
 }
 
-/* Hệ thống câu hỏi trắc nghiệm (Quiz System) */
 .quiz-section {
     background-color: var(--quiz-bg);
     border: 2px dashed var(--border-color);
@@ -435,7 +442,6 @@ td:first-child, th:first-child {
     display: none;
 }
 
-/* Khối nút tương tác */
 .btn-wrapper {
     display: flex;
     gap: 1rem;
@@ -478,7 +484,40 @@ td:first-child, th:first-child {
     display: none;
 }
 
-/* Responsive cho thiết bị di động */
+.audio-btn {
+    background-color: var(--btn-audio-bg);
+    border: 1px solid var(--btn-audio-border);
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    margin: 0 6px;
+    vertical-align: middle;
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.audio-btn:hover {
+    background-color: var(--btn-audio-hover);
+    transform: scale(1.08);
+}
+
+.audio-btn:active {
+    transform: scale(0.95);
+}
+
+.audio-btn svg {
+    width: 1.2em;
+    height: 1.2em;
+    fill: var(--svg-audio-color);
+    transition: fill 0.3s ease;
+}
+
 @media (max-width: 640px) {
     .quick-nav-bar {
         flex-direction: column;
