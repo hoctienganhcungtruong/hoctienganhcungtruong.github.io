@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,42 +17,46 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Chế độ sáng mặc định (Light Mode) */
+        /* Định nghĩa Palette màu cho Light Mode (Mặc định) */
         :root {
             --primary-color: #4f46e5;
             --primary-hover: #4338ca;
             --secondary-color: #0ea5e9;
             --danger-color: #e11d48;
-            --body-bg: #f8fafc;
             --text-dark: #1e293b;
             --text-light: #64748b;
             --bg-gradient: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
             --card-bg: #ffffff;
-            --card-border: #e2e8f0;
-            --badge-bg: #eef2ff;
+            --body-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --heading-color: #0f172a;
+            --badge-bg-thcs: #eef2ff;
             --btn-study-bg: #f1f5f9;
             --btn-study-text: #334155;
-            --header-h1: #0f172a;
+            --toggle-bg: rgba(15, 23, 42, 0.08);
+            --toggle-border: rgba(15, 23, 42, 0.15);
+            --toggle-color: #0f172a;
         }
 
-        /* Tự động kích hoạt Chế độ tối khi hệ thống yêu cầu (Dark Mode) */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --primary-color: #6366f1;
-                --primary-hover: #4f46e5;
-                --secondary-color: #38bdf8;
-                --danger-color: #f43f5e;
-                --body-bg: #0f172a;
-                --text-dark: #f1f5f9;
-                --text-light: #94a3b8;
-                --bg-gradient: linear-gradient(135deg, #064e3b 0%, #0c4a6e 100%);
-                --card-bg: #1e293b;
-                --card-border: #334155;
-                --badge-bg: rgba(99, 102, 241, 0.15);
-                --btn-study-bg: #334155;
-                --btn-study-text: #e2e8f0;
-                --header-h1: #f8fafc;
-            }
+        /* Định nghĩa Palette màu cho Dark Mode */
+        :root[data-theme="dark"] {
+            --primary-color: #6366f1;
+            --primary-hover: #4f46e5;
+            --secondary-color: #38bdf8;
+            --danger-color: #f43f5e;
+            --text-dark: #cbd5e1;
+            --text-light: #94a3b8;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: #1e293b;
+            --body-bg: #0f172a;
+            --border-color: #334155;
+            --heading-color: #f8fafc;
+            --badge-bg-thcs: #312e81;
+            --btn-study-bg: #334155;
+            --btn-study-text: #e2e8f0;
+            --toggle-bg: rgba(255, 255, 255, 0.12);
+            --toggle-border: rgba(255, 255, 255, 0.25);
+            --toggle-color: #ffffff;
         }
 
         body {
@@ -64,10 +68,11 @@
 
         /* Hero Section */
         header {
+            position: relative; /* Thêm để định vị nút theme changer tuyệt đối bên trong */
             background: var(--bg-gradient);
             padding: 5rem 1rem 4rem 1rem;
             text-align: center;
-            border-bottom: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--border-color);
             transition: background 0.3s ease, border-color 0.3s ease;
         }
 
@@ -79,15 +84,13 @@
 
         header h1 {
             font-size: 2.5rem;
-            color: var(--header-h1);
+            color: var(--heading-color);
             margin-bottom: 1rem;
             font-weight: 700;
-            transition: color 0.3s ease;
         }
 
         header h1 span {
             color: var(--primary-color);
-            transition: color 0.3s ease;
         }
 
         header p {
@@ -95,7 +98,43 @@
             color: var(--text-light);
             max-width: 600px;
             margin: 0 auto;
-            transition: color 0.3s ease;
+        }
+
+        /* CSS cho nút Theme Toggle */
+        .theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+            background: var(--toggle-bg);
+            border: 1px solid var(--toggle-border);
+            color: var(--toggle-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        :root[data-theme="dark"] .theme-toggle svg {
+            transform: rotate(180deg);
         }
 
         /* Main Content */
@@ -110,7 +149,7 @@
             position: relative;
             padding-left: 1rem;
             border-left: 4px solid var(--primary-color);
-            transition: border-color 0.3s ease;
+            color: var(--heading-color);
         }
 
         /* Grid Lớp học (Global Success) */
@@ -123,7 +162,7 @@
 
         .class-card {
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
             text-align: center;
@@ -136,11 +175,11 @@
         .class-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-color);
-            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.15);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1);
         }
 
         .class-card .badge {
-            background-color: var(--badge-bg);
+            background-color: var(--badge-bg-thcs);
             color: var(--primary-color);
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
@@ -148,7 +187,12 @@
             font-weight: 600;
             display: inline-block;
             margin-bottom: 1rem;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .class-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
         }
 
         /* Grid Ngữ pháp & Câu điều kiện */
@@ -166,7 +210,7 @@
 
         .tense-card {
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
             height: 100%;
@@ -178,7 +222,7 @@
 
         .card-link:hover .tense-card {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             border-color: var(--secondary-color);
         }
 
@@ -190,7 +234,7 @@
         .tense-card h3 {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            color: var(--heading-color);
             transition: color 0.3s ease;
         }
 
@@ -199,7 +243,6 @@
             color: var(--text-light);
             margin-bottom: 1.5rem;
             flex-grow: 1;
-            transition: color 0.3s ease;
         }
 
         .btn-study {
@@ -232,7 +275,6 @@
             color: #94a3b8;
             font-size: 0.9rem;
             margin-top: 4rem;
-            border-top: 1px solid var(--card-border);
         }
 
         /* Responsive */
@@ -248,6 +290,12 @@
 <body>
 
     <header>
+        <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" aria-label="Thay đổi giao diện">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m0-1.5v-17a8.5 8.5 0 1 1 0 17" fill="currentColor"/>
+            </svg>
+        </button>
+
         <div class="container">
             <h1>Học Tiếng Anh <span>Bứt Phá Điểm Số</span></h1>
             <p>Hệ thống bài học theo sát chương trình Global Success từ lớp 8 đến lớp 12 và trọn bộ bí kíp làm chủ cấu trúc Tiếng Anh.</p>
@@ -401,5 +449,27 @@
         <p>&copy; 2026 Study Web Landing Page. Thiết kế cho học sinh Lớp 8 - 12.</p>
     </footer>
 
+    <script>
+        // Kiểm tra xem người dùng đã từng chọn dark mode chưa khi tải trang
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+
+        // Hàm thay đổi theme khi bấm nút
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            let currentMode = htmlElement.getAttribute('data-theme');
+            
+            if (currentMode === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
 </body>
 </html>
