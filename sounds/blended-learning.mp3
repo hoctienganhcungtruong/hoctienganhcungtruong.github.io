@@ -1,1 +1,0 @@
-{"Message":"User: arn:aws:sts::283031236417:assumed-role/Cognito_IPAReaderUnauth_Role/CognitoIdentityCredentials is not authorized to perform: polly:SynthesizeSpeech because no identity-based policy allows the polly:SynthesizeSpeech action"}
