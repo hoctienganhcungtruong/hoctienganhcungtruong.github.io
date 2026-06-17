@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Success 12</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Global Success 12</h1>
+            <p>Học Ngữ Pháp & Từ Vựng Chi Tiết Trực Tuyến</p>
+        </header>
+        <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" aria-label="Toggle Light/Dark Mode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10m0-1.5v-17a8.5 8.5 0 1 1 0 17" fill="currentColor" />
+            </svg>
+        </button>
+        <div class="quick-nav-bar">
+            <label for="unit-select">Chuyển nhanh đến: </label>
+            <select id="unit-select">
+                <option value="1">Unit 1: Life stories we admire</option>
+                <option value="2">Unit 2: A multicultural world</option>
+                <option value="3">Unit 3: Green living</option>
+                <option value="4">Unit 4: Urbanisation</option>
+                <option value="5">Unit 5: The world of work</option>
+                <option value="6">Unit 6: Artificial intelligence</option>
+                <option value="7">Unit 7: The world of mass media</option>
+                <option value="8">Unit 8: Wildlife conservation</option>
+                <option value="9">Unit 9: Career paths</option>
+                <option value="10">Unit 10: Lifelong learning</option>
+            </select>
+            <button class="btn-jump" onclick="jumpToUnit()">Đi ngay ➔</button>
+        </div>
+        <div class="container">
+        <section id="unit-1" class="unit-card active">
+            <h2 class="unit-title">Unit 1: Life stories we admire (Những câu chuyện cuộc đời chúng ta ngưỡng mộ)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Thì Quá khứ đơn & Thì Quá khứ tiếp diễn (Past Simple vs. Past Continuous)</h3>
+            
+            <div class="attention-box">
+                <strong>💡 Quy tắc cốt lõi:</strong> Phân biệt dựa trên tính chất trọn vẹn hay kéo dài của hành động. 
+                <br>• <strong>Quá khứ đơn:</strong> Hành động đã chấm dứt, là sự kiện chính.
+                <br>• <strong>Quá khứ tiếp diễn:</strong> Hành động đang diễn tiến hoặc làm nền/bối cảnh tại thời điểm quá khứ.
+            </div>
+
+            <div class="row" style="display: flex; gap: 15px; margin-top: 15px;">
+                <!-- Quá khứ đơn -->
+                <div style="flex: 1;" class="example-block">
+                    <h4 style="margin-top: 0; color: var(--primary-color);">I. Thì Quá khứ đơn (Past Simple)</h4>
+                    <span class="badge" style="background-color: var(--primary-color); color: white; padding: 2px 6px; border-radius: 4px;">Công thức</span>
+                    <code>S + V2/ed</code>
+                    
+                    <h5 style="color: var(--secondary-color); margin-bottom: 5px;">Cách miêu tả chính:</h5>
+                    <ul>
+                        <li><strong>Hành động đã hoàn tất:</strong> 
+                            <br>• <em>I read a good book last night.</em>
+                            <br>➔ <small>(Tối qua tôi đã đọc một quyển sách hay.)</small>
+                        </li>
+                        <li><strong>Sự kiện chính của câu chuyện:</strong>
+                            <br>• <em>Mary read a few pages of her book and went to bed.</em>
+                            <br>➔ <small>(Mary đọc một vài trang sách rồi đi ngủ.)</small>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quá khứ tiếp diễn -->
+                <div style="flex: 1;" class="example-block">
+                    <h4 style="margin-top: 0; color: var(--primary-color);">II. Thì Quá khứ tiếp diễn (Past Continuous)</h4>
+                    <span class="badge" style="background-color: var(--primary-color); color: white; padding: 2px 6px; border-radius: 4px;">Công thức</span>
+                    <code>S + was/were + V-ing</code>
+                    
+                    <h5 style="color: var(--secondary-color); margin-bottom: 5px;">Cách miêu tả chính:</h5>
+                    <ul>
+                        <li><strong>Đang xảy ra tại thời điểm cụ thể:</strong>
+                            <br>• <em>I was reading a good book at 10 p.m. last night.</em>
+                            <br>➔ <small>(Lúc 10 giờ tối qua tôi đang đọc một quyển sách hay.)</small>
+                        </li>
+                        <li><strong>Bối cảnh của một câu chuyện:</strong>
+                            <br>• <em>It was raining heavily outside. Mary read a few pages...</em>
+                            <br>➔ <small>(Bên ngoài trời đang mưa. Mary đọc vài trang rồi đi ngủ.)</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 20px;">II. Sự kết hợp giữa hai thì quá khứ</h4>
+            
+            <div class="example-block">
+                <strong>1. Hành động đang diễn ra thì hành động khác xen vào:</strong>
+                <br>• <strong>Quá khứ tiếp diễn:</strong> Cho hành động kéo dài hơn (đang diễn ra).
+                <br>• <strong>Quá khứ đơn:</strong> Cho hành động ngắn hơn (xen vào giữa).
+                <br>👉 <em>Ví dụ:</em> I was reading a book when the phone rang. <small>(Tôi đang đọc sách thì điện thoại reo.)</small>
+            </div>
+
+            <div class="example-block" style="margin-top: 10px;">
+                <strong>2. Các hành động xảy ra song song, cùng một thời điểm:</strong>
+                <br>• Ta chia <strong>Quá khứ tiếp diễn</strong> cho tất cả các vế hành động (thường kết nối bằng liên từ <em>While</em>).
+                <br>• <em>Ví dụ:</em> While I was reading a book, my mother was watching TV. <small>(Trong khi tôi đang đọc sách thì mẹ tôi đang xem TV.)</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">admire /ədˈmaɪər/ <small>(ngưỡng mộ)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukadj/ukadjus016.mp3"></button></div>
+                <div class="vocab-item">life story <small>(câu chuyện cuộc đời)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/uka33/uka33601.mp3"></button></div>
+                <div class="vocab-item">biography /baɪˈɒɡ.rə.fi/ <small>(tiểu sử)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukb/ukbin/ukbingo014.mp3"></button></div>
+                <div class="vocab-item">achievement /əˈtʃiːv.mənt/ <small>(thành tựu)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukace/ukaceta009.mp3"></button></div>
+                <div class="vocab-item">dedicate /ˈded.ɪ.keɪt/ <small>(cống hiến)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdec/ukdecry002.mp3"></button></div>
+                <div class="vocab-item">influential /ˌɪn.fluˈen.ʃəl/ <small>(có tầm ảnh hưởng)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uki/ukinf/ukinfir020.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="1">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 1</div>
+                
+                <div class="question-item" data-correct="B" data-exp="Do có mốc thời gian cụ thể trong quá khứ 'at 10 p.m. last night' (lúc 10 giờ tối qua). Hành động đang xảy ra tại thời điểm này phải được chia ở thì Quá khứ tiếp diễn.">
+                    <p class="question-text">Câu 1: I _________ a very interesting biography book at 10 p.m. last night.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u1q1" value="A"> read</label>
+                        <label class="option-label"><input type="radio" name="u1q1" value="B"> was reading</label>
+                        <label class="option-label"><input type="radio" name="u1q1" value="C"> were reading</label>
+                        <label class="option-label"><input type="radio" name="u1q1" value="D"> have read</label>
+                    </div>
+                </div>
+
+                <div class="question-item" data-correct="C" data-exp="Diễn tả hành động xen vào: Hành động 'đang đọc sách' là hành động dài đang diễn ra (quá khứ tiếp diễn), hành động 'điện thoại reo' đột ngột xen vào là hành động ngắn (quá khứ đơn).">
+                    <p class="question-text">Câu 2: Yesterday, I was reading an inspiring life story of Uncle Ho when the phone suddenly _________.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u1q2" value="A"> ring</label>
+                        <label class="option-label"><input type="radio" name="u1q2" value="B"> was ringing</label>
+                        <label class="option-label"><input type="radio" name="u1q2" value="C"> rang</label>
+                        <label class="option-label"><input type="radio" name="u1q2" value="D"> rings</label>
+                    </div>
+                </div>
+
+                <div class="question-item" data-correct="D" data-exp="Từ nối 'While' diễn tả hai hành động diễn ra song song đồng thời tại một thời điểm trong quá khứ (Tôi đang đọc sách, mẹ đang xem TV), cả hai vế đều chia Quá khứ tiếp diễn.">
+                    <p class="question-text">Câu 3: While I was reading a book about historical heroes, my mother _________ TV in the living room.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u1q3" value="A"> watched</label>
+                        <label class="option-label"><input type="radio" name="u1q3" value="B"> watches</label>
+                        <label class="option-label"><input type="radio" name="u1q3" value="C"> is watching</label>
+                        <label class="option-label"><input type="radio" name="u1q3" value="D"> was watching</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(1)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(2)">Học tiếp Unit 2 ➔</button>
+                </div>
+                <div class="score-box" id="score-u1"></div>
+            </div>
+        </section>
+
+        <section id="unit-2" class="unit-card"> <h2 class="unit-title">Unit 2: A multicultural world (Một thế giới đa văn hóa)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Mạo từ - Ôn tập & Mở rộng (Articles - Review & Extension)</h3>
+            
+            <div class="attention-box">
+                <strong>💡 Quy tắc tổng quan:</strong>
+                <br>• Mạo từ không xác định <code>a/an</code> dùng cho đối tượng chung chung, nhắc đến lần đầu.
+                <br>• Mạo từ xác định <code>the</code> dùng cho đối tượng đã xác định, cả người nói và người nghe đều biết rõ.
+                <br>• <code>Zero article (Ø)</code> không dùng mạo từ khi nói về bản chất chung của danh từ số nhiều/không đếm được.
+            </div>
+
+            <h4 style="color: var(--primary-color);">I. Mạo từ không xác định (Indefinite Articles): A / An</h4>
+            <p>Dùng trước <strong>danh từ đếm được số ít</strong> khi người đọc/người nghe chưa biết cụ thể đối tượng đó là ai hoặc cái gì.</p>
+            <div class="example-block">
+                • <em>Ví dụ:</em> I want to buy <strong>a</strong> souvenir. 
+                <br>➔ <small>(Tôi muốn mua một món quà lưu niệm - món nào cũng được, chưa chỉ định rõ).</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 20px;">II. Mạo từ xác định (Definite Article): The</h4>
+            <p>Dùng trước danh từ số ít hoặc số nhiều khi đối tượng đã được định hình rõ ràng trong ngữ cảnh vì các lý do sau:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">Trường hợp sử dụng</th>
+                        <th style="width: 65%;">Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Đối tượng là duy nhất</strong> (Trong tự nhiên hoặc trong bối cảnh hẹp)</td>
+                        <td>• <strong>The</strong> sun rises in <strong>the</strong> east. <small>(Mặt trời và các hướng địa lý là duy nhất).</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Đối tượng đã được nhắc đến</strong> trước đó trong câu/đoạn văn</td>
+                        <td>• A boy lost a watch. A woman found <strong>the</strong> watch and returned it to <strong>the</strong> boy. <small>(Chiếc đồng hồ và cậu bé ở câu 2 đã xác định nhờ câu 1).</small></td>
+                    </tr>
+                    <tr>
+                        <td>Tên các <strong>nhạc cụ</strong> (khi đi với động từ play)</td>
+                        <td>• I’m learning to play <strong>the</strong> piano. <small>(Tôi đang học chơi dương cầm).</small></td>
+                    </tr>
+                    <tr>
+                        <td>Tên quốc gia có chứa các từ: <em>Kingdom, State, Republic</em> hoặc ở dạng <strong>số nhiều</strong></td>
+                        <td>• <strong>the</strong> UK (Vương quốc Anh), <strong>the</strong> US (Liên bang Mỹ), <strong>the</strong> Philippines.</td>
+                    </tr>
+                    <tr>
+                        <td>Tên các <strong>đại dương, biển, dãy núi</strong>, địa danh địa lý đặc biệt</td>
+                        <td>• <strong>The</strong> Pacific is the largest of all oceans. <small>(Thái Bình Dương rộng lớn nhất...)</small></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="color: var(--primary-color); margin-top: 20px;">III. Trường hợp không dùng mạo từ (Zero Article - Ø)</h4>
+            <p>Không dùng mạo từ trước <strong>danh từ đếm được số nhiều</strong> hoặc <strong>danh từ không đếm được</strong> khi mang nghĩa chung chung, khái quát.</p>
+            <div class="example-block">
+                • <em>Ví dụ:</em> <strong>Ø</strong> Tigers are endangered animals.
+                <br>➔ <small>(Loài hổ nói chung là động vật đang gặp nguy hiểm, không chỉ định đàn hổ cụ thể nào).</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">multicultural /ˌmʌl.tiˈkʌl.tʃər.əl/ <small>(đa văn hóa)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukb/ukb00/ukb00835.mp3"></button></div>
+                <div class="vocab-item">souvenir /ˌsuː.vənˈɪər/ <small>(quà lưu niệm)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksou/uksouth007.mp3"></button></div>
+                <div class="vocab-item">endangered /ɪnˈdeɪn.dʒəd/ <small>(gặp nguy hiểm/có nguy cơ tuyệt chủng)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukad5/ukad5051.mp3"></button></div>
+                <div class="vocab-item">diversity /daɪˈvɜː.sə.ti/ <small>(sự đa dạng)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdis/ukdisun030.mp3"></button></div>
+                <div class="vocab-item">custom /ˈkʌs.təm/ <small>(phong tục)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcur/ukcurta024.mp3"></button></div>
+                <div class="vocab-item">identity /aɪˈden.tə.ti/ <small>(bản sắc/danh tính)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uki/ukico/ukicono024.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="2">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 2</div>
+                
+                <div class="question-item" data-correct="B" data-exp="Ở vế đầu, 'United States' là quốc gia có từ 'States' (bang) nên bắt buộc đi với mạo từ 'the'. Ở vế sau, 'Pacific Ocean' (Thái Bình Dương) là tên đại dương nên cũng bắt buộc dùng 'the'. Chọn 'the / the'.">
+                    <p class="question-text">Câu 1: _________ United States lies between _________ Pacific Ocean and the Atlantic Ocean.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u2q1" value="A"> A / the</label>
+                        <label class="option-label"><input type="radio" name="u2q1" value="B"> The / the</label>
+                        <label class="option-label"><input type="radio" name="u2q1" value="C"> Ø / the</label>
+                        <label class="option-label"><input type="radio" name="u2q1" value="D"> The / Ø</label>
+                    </div>
+                </div>
+
+                <div class="question-item" data-correct="D" data-exp="Đối tượng danh từ 'guitar' là một nhạc cụ và đứng sau động từ 'play', theo quy tắc ngữ pháp mở rộng về mạo từ, ta phải sử dụng mạo từ xác định 'the'.">
+                    <p class="question-text">Câu 2: My brother is dynamic; he can play _________ guitar very well.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u2q2" value="A"> a</label>
+                        <label class="option-label"><input type="radio" name="u2q2" value="B"> an</label>
+                        <label class="option-label"><input type="radio" name="u2q2" value="C"> Ø</label>
+                        <label class="option-label"><input type="radio" name="u2q2" value="D"> the</label>
+                    </div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="'Lions' (những con sư tử) là danh từ đếm được số nhiều, ở đây câu đang nói về đặc tính săn mồi chung của loài sư tử chứ không chỉ định một đàn cụ thể nào. Vì vậy áp dụng quy tắc không dùng mạo từ (Ø).">
+                    <p class="question-text">Câu 3: _________ Lions are known as powerful predators in the African savannah.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u2q3" value="A"> Ø</label>
+                        <label class="option-label"><input type="radio" name="u2q3" value="B"> The</label>
+                        <label class="option-label"><input type="radio" name="u2q3" value="C"> A</label>
+                        <label class="option-label"><input type="radio" name="u2q3" value="D"> An</label>
+                    </div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(2)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(3)">Học tiếp Unit 3 ➔</button>
+                </div>
+                <div class="score-box" id="score-u2"></div>
+            </div>
+        </section>
+
+        <section id="unit-3" class="unit-card">
+            <h2 class="unit-title">Unit 3: Green living (Lối sống xanh)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Động từ đi với giới từ & Mệnh đề quan hệ thay thế cho cả câu</h3>
+            
+            <h4 style="color: var(--primary-color);">I. Động từ với giới từ (Verbs with Prepositions)</h4>
+            <p>Trong tiếng Anh, cấu trúc kết hợp giữa động từ và giới từ được chia làm hai nhóm chính dựa trên sự thay đổi về nghĩa:</p>
+
+            <div class="example-block">
+                <strong>1. Động từ + Giới từ (Nghĩa ít thay đổi):</strong>
+                <br>Nhiều động từ đi kèm một giới từ cố định và theo sau bởi một tân ngữ. Nghĩa của cấu trúc này thường tương tự hoặc phát triển trực tiếp từ nghĩa gốc của động từ ban đầu.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Giới từ đi kèm</th>
+                        <th style="width: 75%;">Các động từ thông dụng & Ý nghĩa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>about</strong></td>
+                        <td>
+                            • <strong>ask about</strong> (hỏi về)<br>
+                            • <strong>care about</strong> (quan tâm về)<br>
+                            • <strong>talk about</strong> (nói về)<br>
+                            • <strong>learn about</strong> (học hỏi về)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>for</strong></td>
+                        <td>
+                            • <strong>ask for</strong> (hỏi xin) <br> 
+                            • <strong>apply for</strong> (ứng tuyển) <br>
+                            • <strong>apologise for</strong> (xin lỗi về việc) <br> 
+                            • <strong>wait for</strong> (chờ đợi) <br> 
+                            • <strong>prepare for</strong> (chuẩn bị cho)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>on</strong></td>
+                        <td>
+                            • <strong>agree on</strong> (đồng ý về)<br>
+                            • <strong>base on</strong> (dựa trên)<br>
+                            • <strong>depend on</strong> (phụ thuộc vào)<br>
+                            • <strong>rely on</strong> (dựa dẫm vào)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>to</strong></td>
+                        <td>
+                            • <strong>introduce to</strong> (giới thiệu đến ai)<br>
+                            • <strong>refer to</strong> (ám chỉ đến)<br>
+                            • <strong>respond to</strong> (phản hồi đến)<br>
+                            • <strong>listen to</strong> (lắng nghe)<br>
+                            • <strong>explain to</strong> (giải thích cho ai)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-block" style="margin-top: 15px;">
+                <strong>2. Cụm động từ - Phrasal Verbs (Nghĩa thay đổi hoàn toàn):</strong>
+                <br>Là sự kết hợp giữa một động từ với một giới từ hoặc trạng từ để tạo thành một tầng nghĩa mới, khác biệt hoàn toàn so với nghĩa gốc của động từ chính.
+                <br><br>
+                • <strong>work out</strong> (tập luyện)<br>
+                • <strong>carry out</strong> (tiến hành)<br>
+                • <strong>turn on</strong> (bật lên/mở)<br> 
+                • <strong>look for</strong> (tìm kiếm)<br>
+                • <strong>look after</strong> (chăm sóc)<br>
+                • <strong>look up</strong> (tra cứu)
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Mệnh đề quan hệ ám chỉ cả một câu (Relative clauses referring to a whole sentence)</h4>
+            <p>Chúng ta sử dụng một <strong>mệnh đề quan hệ không xác định</strong> để đại diện hoặc đưa ra lời nhận xét cho toàn bộ thông tin, sự việc được nhắc đến ở vế câu trước đó.</p>
+            
+            <div class="attention-box">
+                <strong>⚠️ Quy tắc ngữ pháp bắt buộc:</strong>
+                <br>• Chỉ sử dụng đại từ quan hệ <code>which</code> (không được dùng <em>that</em> hoặc các đại từ khác).
+                <br>• Luôn luôn phải <strong>thêm dấu phẩy (,)</strong> ngay trước từ <code>which</code>.
+            </div>
+
+            <div class="example-block">
+                • <em>Ví dụ:</em> More and more people are interested in recycling nowadays<strong>, which</strong> is good for the environment.
+                <br>➔ <small>(Ngày ngày càng có nhiều người quan tâm đến việc tái chế, điều này tốt cho môi trường.)</small>
+                <br>👉 <em>Bản chất câu:</em> <strong>Which</strong> thay thế cho cả mệnh đề "The fact that more and more people are interested in recycling nowadays".
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">green living /ɡriːn ˈlɪvɪŋ/ <small>(lối sống xanh)</small> <button class="audio-btn" data-audio="sounds/green-living.mp3"></button></div>
+                <div class="vocab-item">recycle /ˌriːˈsaɪ.kəl/ <small>(tái chế)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukr/ukrec/ukrecum010.mp3"></button></div>
+                <div class="vocab-item">environment /ɪnˈvaɪ.rən.mənt/ <small>(môi trường)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uke/ukent/ukentre019.mp3"></button></div>
+                <div class="vocab-item">carry out /ˈkær.i aʊt/ <small>(tiến hành/thực hiện)</small> <button class="audio-btn" data-audio="sounds/look-after.mp3"></button></div>
+                <div class="vocab-item">apologise /əˈpɒl.ə.dʒaɪz/ <small>(xin lỗi)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukapo/ukapolo001.mp3"></button></div>
+                <div class="vocab-item">look after /lʊk ˈɑːf.tər/ <small>(chăm sóc)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukl/uklod/uklodge016.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="3">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 3</div>
+                
+                <div class="question-item" data-correct="C" data-exp="Động từ 'apply' (nộp đơn/ứng tuyển) khi đi với một vị trí công việc hoặc học bổng sẽ đi kèm với giới từ 'for'. Cấu trúc: 'apply for something'.">
+                    <p class="question-text">Câu 1: Many young people want to apply _________ the green project to protect their local environment.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u3q1" value="A"> about</label>
+                        <label class="option-label"><input type="radio" name="u3q1" value="B"> on</label>
+                        <label class="option-label"><input type="radio" name="u3q1" value="C"> for</label>
+                        <label class="option-label"><input type="radio" name="u3q1" value="D"> to</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Dựa vào nghĩa của câu, 'carry out' có nghĩa là tiến hành/thực hiện (một chiến dịch, nghiên cứu). Các cụm từ còn lại không phù hợp: look up (tra cứu), turn on (bật thiết bị), work out (tập luyện/tính toán).">
+                    <p class="question-text">Câu 2: The school plans to _________ a new campaign to encourage students to reduce plastic waste.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u3q2" value="A"> carry out</label>
+                        <label class="option-label"><input type="radio" name="u3q2" value="B"> look up</label>
+                        <label class="option-label"><input type="radio" name="u3q2" value="C"> turn on</label>
+                        <label class="option-label"><input type="radio" name="u3q2" value="D"> work out</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="B" data-exp="Câu cần một đại từ quan hệ thay thế cho toàn bộ sự việc ở vế trước ('Họ đạp xe đi học mỗi ngày'). Để thay thế cho cả một mệnh đề và đứng sau dấu phẩy, ta bắt buộc dùng đại từ 'which'.">
+                    <p class="question-text">Câu 3: They always cycle to school every day _________ helps to cut down carbon emissions.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u3q3" value="A"> , that</label>
+                        <label class="option-label"><input type="radio" name="u3q3" value="B"> , which</label>
+                        <label class="option-label"><input type="radio" name="u3q3" value="C"> what</label>
+                        <label class="option-label"><input type="radio" name="u3q3" value="D"> , who</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(3)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(4)">Học tiếp Unit 4 ➔</button>
+                </div>
+                <div class="score-box" id="score-u3"></div>
+            </div>
+        </section>
+
+        <section id="unit-4" class="unit-card">
+            <h2 class="unit-title">Unit 4: Urbanisation (Đô thị hóa)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Thì Hiện tại hoàn thành & Cấu trúc So sánh kép</h3>
+            
+            <h4 style="color: var(--primary-color);">I. Thì Hiện tại hoàn thành - Ôn tập & Mở rộng (Present Perfect - Review & Extension)</h4>
+            <p>Bên cạnh cách dùng cơ bản (diễn tả hành động bắt đầu trong quá khứ kéo dài đến hiện tại, hoặc vừa mới hoàn thành gần đây), thì hiện tại hoàn thành còn được mở rộng trong các cấu trúc đặc biệt sau:</p>
+
+            <div class="example-block">
+                <strong>1. Nói về số lần xảy ra của một sự việc:</strong>
+                <br>Sử dụng khi muốn nhấn mạnh đây là lần thứ nhất, thứ hai,... một trải nghiệm nào đó diễn ra.
+                <div class="formula-box">
+                    It / This / That + be + the first / the second time + S + have / has + V3/ed
+                </div>
+                • <em>Ví dụ 1:</em> This is the second time I <strong>have visited</strong> this city. <small>(Đây là lần thứ hai tôi đến tham quan thành phố này).</small>
+                <br>• <em>Ví dụ 2:</em> It is not the first time I <strong>have heard</strong> about urbanization. <small>(Đây không phải là lần đầu tiên tôi nghe về sự đô thị hóa).</small>
+            </div>
+
+            <div class="example-block" style="margin-top: 15px;">
+                <strong>2. Nói về một trải nghiệm độc đáo nhất (So sánh nhất):</strong>
+                <br>Thường đi kèm với từ <em>ever</em> (từng) để nhấn mạnh một trải nghiệm tốt nhất, tệ nhất, hoặc duy nhất tính đến thời điểm hiện tại.
+                <div class="formula-box">
+                    It/This/That/Danh từ (V-ing) + be + the best / worst / only / most... + S + have / has + (ever) + V3/ed
+                </div>
+                • <em>Ví dụ 1:</em> That is the worst meal I <strong>have ever had</strong> in this city. <small>(Đó là bữa ăn tệ nhất mà tôi từng ăn trong thành phố này).</small>
+                <br>• <em>Ví dụ 2:</em> Moving to the city is the best decision my parents <strong>have ever made</strong> in their life. <small>(Việc chuyển đến thành phố này là quyết định tốt nhất mà bố mẹ tôi từng thực hiện trong đời).</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. So sánh kép để thể hiện sự thay đổi (Double comparatives to show change)</h4>
+            
+            <div class="example-block">
+                <strong>1. Diễn tả một sự vật, hiện tượng ngày càng tiến triển (Càng ngày càng...):</strong>
+                <div class="formula-box">
+                    S + V + so sánh hơn + AND + so sánh hơn
+                </div>
+                • <strong>Tính từ ngắn:</strong> Towns are getting <strong>bigger and bigger</strong>. <small>(Thị trấn ngày càng to ra).</small>
+                <br>• <strong>Tính từ dài:</strong> The air is becoming <strong>more and more polluted</strong>. <small>(Không khí ngày càng ô nhiễm).</small>
+                <br>• <strong>Với danh từ:</strong> There are <strong>more and more</strong> high-rise buildings in the city. <small>(Ngày càng có nhiều tòa nhà cao tầng trong thành phố).</small>
+            </div>
+
+            <div class="example-block" style="margin-top: 15px;">
+                <strong>2. Diễn tả hai sự vật thay đổi cùng nhau (Càng... thì càng...):</strong>
+                <div class="formula-box">
+                    THE + so sánh hơn + S + V, THE + so sánh hơn + S + V
+                </div>
+                • <em>Ví dụ 1:</em> <strong>The bigger</strong> the city gets, <strong>the more crowded</strong> it becomes. <small>(Thành phố càng to, nó càng trở nên đông đúc).</small>
+                <br>• <em>Ví dụ 2:</em> <strong>The more</strong> we invest in rural areas, <strong>the more</strong> we can help people there. <small>(Chúng ta đầu tư càng nhiều vào vùng nông thôn, chúng ta càng giúp được nhiều người dân ở đây).</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">urbanisation /ˌɜː.bən.aɪˈzeɪ.ʃən/ <small>(sự đô thị hóa)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uku/ukups/ukupstr020.mp3"></button></div>
+                <div class="vocab-item">high-rise building <small>(tòa nhà cao tầng)</small> <button class="audio-btn" data-audio="sounds/high-rise-building.mp3"></button></div>
+                <div class="vocab-item">polluted /pəˈluː.tɪd/ <small>(bị ô nhiễm)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo11/cdo1121ukpoll3493.mp3"></button></div>
+                <div class="vocab-item">rural area /ˈrʊə.rəl ˈeə.ri.ə/ <small>(vùng nông thôn)</small> <button class="audio-btn" data-audio="sounds/rural-area.mp3"></button></div>
+                <div class="vocab-item">crowded /ˈkraʊ.dɪd/ <small>(đông đúc)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcro/ukcross030.mp3"></button></div>
+                <div class="vocab-item">invest /ɪnˈvest/ <small>(đầu tư)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uki/ukinv/ukinvei015.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="4">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 4</div>
+                
+                <div class="question-item" data-correct="C" data-exp="Dựa vào cấu trúc cố định 'This is the first time + S + Hiện tại hoàn thành'. Chủ ngữ ở đây là 'she' (số ít) nên ta chọn 'has experienced'.">
+                    <p class="question-text">Câu 1: This is the first time she _________ such a crowded and bustling life in a big city.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u4q1" value="A"> experienced</label>
+                        <label class="option-label"><input type="radio" name="u4q1" value="B"> experiences</label>
+                        <label class="option-label"><input type="radio" name="u4q1" value="C"> has experienced</label>
+                        <label class="option-label"><input type="radio" name="u4q1" value="D"> have experienced</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Câu diễn tả một xu hướng đang phát triển liên tục (ngày càng...). Vì 'polluted' là tính từ dài nên dạng so sánh kép tương ứng sẽ là 'more and more polluted'.">
+                    <p class="question-text">Câu 2: Because of rapid urbanisation, the air in this region is becoming _________.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u4q2" value="A"> more and more polluted</label>
+                        <label class="option-label"><input type="radio" name="u4q2" value="B"> polluted and polluted</label>
+                        <label class="option-label"><input type="radio" name="u4q2" value="B"> much and more polluted</label>
+                        <label class="option-label"><input type="radio" name="u4q2" value="D"> more polluted and more</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="D" data-exp="Áp dụng cấu trúc hai sự vật biến đổi cùng nhau: 'The + so sánh hơn + S + V, The + so sánh hơn + S + V'. Với trạng từ 'much' đổi thành 'more', tính từ 'modern' (dài) đổi thành 'more modern'. Chọn 'The more / the more modern'.">
+                    <p class="question-text">Câu 3: _________ money the government spends on infrastructure, _________ the town becomes.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u4q3" value="A"> More / more modern</label>
+                        <label class="option-label"><input type="radio" name="u4q3" value="B"> The much / the modern</label>
+                        <label class="option-label"><input type="radio" name="u4q3" value="C"> The more / the most modern</label>
+                        <label class="option-label"><input type="radio" name="u4q3" value="D"> The more / the more modern</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(4)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(5)">Học tiếp Unit 5 ➔</button>
+                </div>
+                <div class="score-box" id="score-u4"></div>
+            </div>
+        </section>
+
+        <section id="unit-5" class="unit-card">
+            <h2 class="unit-title">Unit 5: The world of work (Thế giới nghề nghiệp)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Câu đơn, câu ghép và câu phức - Ôn tập & Mở rộng</h3>
+            
+            <h4 style="color: var(--primary-color);">I. Câu đơn (Simple Sentences)</h4>
+            <p>Một câu đơn cấu tạo chỉ bao gồm <strong>một mệnh đề độc lập duy nhất</strong> (diễn đạt một ý trọn vẹn, có đầy đủ chủ ngữ và vị ngữ).</p>
+            <div class="example-block">
+                • <em>Ví dụ:</em> My brother didn’t apply for the job.
+                <br>➔ <small>(Anh trai tôi đã không ứng tuyển công việc này.)</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Câu ghép (Compound Sentences)</h4>
+            <p>Một câu ghép bao gồm <strong>hai hoặc nhiều mệnh đề độc lập</strong> liên kết lại với nhau. Các mệnh đề này có thể kết nối thông qua 3 cách chính sau:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Phương thức liên kết</th>
+                        <th style="width: 30%;">Từ nối thông dụng</th>
+                        <th style="width: 40%;">Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Liên từ đẳng lập</strong> (Coordinating Conjunctions)</td>
+                        <td><em>and, but, or, nor, yet, so</em></td>
+                        <td>• My brother didn’t apply for the job, <strong>but</strong> he was offered an apprenticeship. <small>(...nhưng được mời thực tập.)</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cặp liên từ tương hỗ</strong> (Correlative Conjunctions)</td>
+                        <td><em>not only… but also</em> (không những... mà còn)</td>
+                        <td>• He is <strong>not only</strong> skilled <strong>but also</strong> dedicated to his career. <small>(Anh ấy không chỉ giỏi mà còn tận tụy.)</small></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trạng từ liên kết</strong> (Conjunctive Adverbs)</td>
+                        <td><em>as a result, moreover, in fact, on the other hand</em></td>
+                        <td>• Being a nurse is a very tiring job; <strong>moreover</strong>, you don’t earn a high salary. <small>(...hơn nữa, lương không cao.)</small></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">III. Câu phức (Complex Sentences)</h4>
+            <p>Một câu phức bao gồm <strong>một hoặc nhiều mệnh đề độc lập</strong> kết hợp với <strong>ít nhất một mệnh đề phụ thuộc</strong> thông qua các liên từ phụ thuộc.</p>
+            
+            <div class="attention-box">
+                <strong>💡 Lưu ý về dấu câu:</strong> 
+                <br>Nếu mệnh đề phụ thuộc đứng ở đầu câu, ta bắt buộc phải dùng <strong>dấu phẩy (,)</strong> để ngăn cách với mệnh đề độc lập phía sau. Nếu mệnh đề phụ thuộc đứng sau, dấu phẩy thường không cần thiết.
+            </div>
+
+            <div class="example-block">
+                • <strong>Mệnh đề chỉ thời gian (when, while):</strong>
+                <br>👉 <strong>When</strong> I was younger, I wanted to become a driver. <small>(Khi còn trẻ tôi muốn trở thành tài xế.)</small>
+                <br><br>• <strong>Mệnh đề chỉ nguyên nhân, điều kiện, nhượng bộ (because, although, if, so that):</strong>
+                <br>👉 <strong>Because</strong> my brother is often late for work, he is never promoted. <small>(Vì anh trai tôi đi làm muộn nên không bao giờ được thăng chức.)</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">apply for /əˈplaɪ fɔːr/ <small>(ứng tuyển công việc)</small> <button class="audio-btn" data-audio="sounds/apply-for.mp3"></button></div>
+                <div class="vocab-item">apprenticeship /əˈpren.tɪs.ʃɪp/ <small>(sự thực tập/học việc)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukapp/ukappra016.mp3"></button></div>
+                <div class="vocab-item">promoted /prəˈməʊ.tɪd/ <small>(được thăng chức)</small> <button class="audio-btn" data-audio="sounds/promoted.mp3"></button></div>
+                <div class="vocab-item">salary /ˈsæl.ər.i/ <small>(tiền lương)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksal/uksalaa010.mp3"></button></div>
+                <div class="vocab-item">tiring /ˈtaɪə.rɪŋ/ <small>(mệt mỏi/gây kiệt sức)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukt/uktip/uktippe019.mp3"></button></div>
+                <div class="vocab-item">moreover /mɔːrˈəʊ.vər/ <small>(hơn thế nữa)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukm/ukmor/ukmorda005.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="5">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 5</div>
+                
+                <div class="question-item" data-correct="B" data-exp="Câu gồm một mệnh đề phụ thuộc đứng trước 'Although she worked very hard' liên kết với mệnh đề độc lập phía sau bằng dấu phẩy. Đây là cấu trúc điển hình của một câu phức (Complex sentence).">
+                    <p class="question-text">Câu 1: Xác định loại câu sau: 'Although she worked very hard, she was not promoted to manager.'</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u5q1" value="A"> Câu đơn (Simple sentence)</label>
+                        <label class="option-label"><input type="radio" name="u5q1" value="B"> Câu phức (Complex sentence)</label>
+                        <label class="option-label"><input type="radio" name="u5q1" value="C"> Câu ghép (Compound sentence)</label>
+                        <label class="option-label"><input type="radio" name="u5q1" value="D"> Câu ghép-phức (Compound-complex sentence)</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Giữa hai mệnh đề độc lập xuất hiện dấu chấm phẩy (;) và dấu phẩy (,), vị trí này cần điền một trạng từ liên kết (Conjunctive adverb). Xét theo nghĩa của câu (Làm việc ngoài trời rất vất vả; hơn thế nữa, thu nhập không ổn định), ta chọn 'moreover'.">
+                    <p class="question-text">Câu 2: Working outdoors in winter is tough; _________, the income is not stable.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u5q2" value="A"> moreover</label>
+                        <label class="option-label"><input type="radio" name="u5q2" value="B"> because</label>
+                        <label class="option-label"><input type="radio" name="u5q2" value="C"> but</label>
+                        <label class="option-label"><input type="radio" name="u5q2" value="D"> although</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="D" data-exp="Câu chỉ gồm duy nhất một mệnh đề độc lập hoàn chỉnh với chủ ngữ cụm danh động từ 'Applying for a digital marketing apprenticeship' và vị ngữ 'requires deep technical skills'. Do đó, đây là một câu đơn (Simple sentence).">
+                    <p class="question-text">Câu 3: Xác định loại câu sau: 'Applying for a digital marketing apprenticeship requires deep technical skills.'</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u5q3" value="A"> Câu ghép (Compound sentence)</label>
+                        <label class="option-label"><input type="radio" name="u5q3" value="B"> Câu phức (Complex sentence)</label>
+                        <label class="option-label"><input type="radio" name="u5q3" value="C"> Câu chứa mệnh đề phụ</label>
+                        <label class="option-label"><input type="radio" name="u5q3" value="D"> Câu đơn (Simple sentence)</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(5)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(6)">Học tiếp Unit 6 ➔</button>
+                </div>
+                <div class="score-box" id="score-u5"></div>
+            </div>
+        </section>
+
+        <section id="unit-6" class="unit-card">
+            <h2 class="unit-title">Unit 6: Artificial intelligence (Trí tuệ nhân tạo)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Cấu trúc Sai khiến Chủ động và Bị động (Active & Passive Causatives)</h3>
+            <p>Cấu trúc sai khiến (Causative Form) được sử dụng để diễn tả việc chủ ngữ không tự làm một hành động, mà sắp xếp, nhờ vả, hoặc thuê người khác thực hiện hành động đó.</p>
+
+            <h4 style="color: var(--primary-color);">I. Thể sai khiến chủ động (Active Causatives)</h4>
+            <p>Được sử dụng khi chủ ngữ trực tiếp yêu cầu hoặc nhờ một <strong>tân ngữ chỉ người</strong> thực hiện công việc. Ý nghĩa cơ bản là <em>"Nhờ/Sai ai làm việc gì"</em>.</p>
+            
+            <div class="attention-box">
+                <strong>⚠️ Sự khác biệt quan trọng về dạng của Động từ:</strong>
+                <br>• Với động từ <strong>HAVE</strong>: Tân ngữ chỉ người đi với <strong>Động từ nguyên thể không "to" (Bare-inf)</strong>.
+                <br>• Với động từ <strong>GET</strong>: Tân ngữ chỉ người bắt buộc phải đi với <strong>Động từ nguyên thể có "to" (To-inf)</strong>.
+            </div>
+
+            <div class="formula-box">
+                • S + HAVE + tân ngữ chỉ người + V (nguyên thể)<br>
+                • S + GET + tân ngữ chỉ người + TO + V (nguyên thể)
+            </div>
+
+            <div class="example-block">
+                • <em>Ví dụ với HAVE:</em> The AI expert <strong>had</strong> his assistant <strong>activate</strong> the new robot.
+                <br>➔ <small>(Chuyên gia trí tuệ nhân tạo nhờ trợ lý kích hoạt người máy mới.)</small>
+                <br><br>• <em>Ví dụ với GET:</em> I will <strong>get</strong> more people <strong>to join</strong> the technology club.
+                <br>➔ <small>(Tôi sẽ nhờ thêm nhiều người tham gia câu lạc bộ công nghệ.)</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Thể sai khiến bị động (Passive Causatives)</h4>
+            <p>Được sử dụng khi chủ ngữ muốn một công việc hay một <strong>tân ngữ chỉ vật</strong> được thực hiện bởi người khác (người thực hiện có thể được ẩn đi). Ý nghĩa cơ bản là <em>"Có cái gì được làm bởi ai"</em>.</p>
+            
+            <div class="attention-box">
+                <strong>💡 Điểm tiện lợi:</strong> 
+                <br>Ở thể bị động, cả hai động từ <strong>HAVE</strong> và <strong>GET</strong> đều có chung một cấu trúc đồng nhất và đều sử dụng <strong>Quá khứ phân từ (V3/ed)</strong>.
+            </div>
+
+            <div class="formula-box">
+                S + HAVE / GET + tân ngữ chỉ vật + V3/ed
+            </div>
+
+            <div class="example-block">
+                • <em>Ví dụ:</em> The AI expert <strong>had / got</strong> the new robot <strong>activated</strong>.
+                <br>➔ <small>(Chuyên gia trí tuệ nhân tạo đã nhờ kích hoạt con người máy mới / đã có con người máy mới được kích hoạt.)</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">artificial intelligence /ˌɑː.tɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/ <small>(trí tuệ nhân tạo)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcld/ukcld00044.mp3"></button></div>
+                <div class="vocab-item">expert /ˈek.spɜːt/ <small>(chuyên gia)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uke/ukexp/ukexper008.mp3"></button></div>
+                <div class="vocab-item">assistant /əˈsɪs.tənt/ <small>(trợ lý)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukass/ukassau030.mp3"></button></div>
+                <div class="vocab-item">activate /ˈæk.tɪ.veɪt/ <small>(kích hoạt)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukact/ukactiv001.mp3"></button></div>
+                <div class="vocab-item">robot /ˈrəʊ.bɒt/ <small>(người máy)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukr/ukrn_/ukrn___030.mp3"></button></div>
+                <div class="vocab-item">tech-savvy /tɛk-ˈsævi/ <small>(am hiểu công nghệ)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukb/ukbp1/ukbp1134.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="6">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 6</div>
+                
+                <div class="question-item" data-correct="A" data-exp="Câu sử dụng cấu trúc sai khiến chủ động với động từ 'had' và tân ngữ chỉ người 'the IT department'. Do đó, động từ theo sau phải ở dạng nguyên thể không 'to' (Bare-inf). Chọn 'update'.">
+                    <p class="question-text">Câu 1: The manager had the IT department _________ the AI software on all company computers.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u6q1" value="A"> update</label>
+                        <label class="option-label"><input type="radio" name="u6q1" value="B"> to update</label>
+                        <label class="option-label"><input type="radio" name="u6q1" value="C"> updated</label>
+                        <label class="option-label"><input type="radio" name="u6q1" value="D"> updating</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="B" data-exp="Câu sử dụng cấu trúc sai khiến chủ động với động từ 'get' và tân ngữ chỉ người 'his developer'. Vì vậy, động từ theo sau phải có 'to' (To-inf). Chọn 'to program'.">
+                    <p class="question-text">Câu 2: He will get his developer _________ a new algorithm for the smart home system.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u6q2" value="A"> program</label>
+                        <label class="option-label"><input type="radio" name="u6q2" value="B"> to program</label>
+                        <label class="option-label"><input type="radio" name="u6q2" value="C"> programmed</label>
+                        <label class="option-label"><input type="radio" name="u6q2" value="D"> programming</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="C" data-exp="Tân ngữ phía sau động từ 'got' là 'their data' (dữ liệu của họ) - một tân ngữ chỉ vật. Đây là cấu trúc sai khiến bị động, động từ cần chia ở dạng quá khứ phân từ V3/ed. Chọn 'analysed'.">
+                    <p class="question-text">Câu 3: The tech company got their data _________ by a highly advanced AI machine.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u6q3" value="A"> analyse</label>
+                        <label class="option-label"><input type="radio" name="u6q3" value="B"> to analyse</label>
+                        <label class="option-label"><input type="radio" name="u6q3" value="C"> analysed</label>
+                        <label class="option-label"><input type="radio" name="u6q3" value="D"> analysing</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(6)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(7)">Học tiếp Unit 7 ➔</button>
+                </div>
+                <div class="score-box" id="score-u6"></div>
+            </div>
+        </section>
+
+        <section id="unit-7" class="unit-card">
+            <h2 class="unit-title">Unit 7: The world of mass media (Thế giới truyền thông đại chúng)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Mệnh đề trạng ngữ chỉ Cách thức và Kết quả (Adverbial clauses of manner and result)</h3>
+            <p>Mệnh đề trạng ngữ (Adverbial Clause) là một mệnh đề phụ thuộc đóng vai trò bổ nghĩa cho động từ, tính từ hoặc cả câu, làm rõ các phương diện như cách thức hoặc hệ quả diễn ra.</p>
+
+            <h4 style="color: var(--primary-color);">I. Mệnh đề trạng ngữ chỉ cách thức (Adverbial clauses of manner)</h4>
+            <p>Dùng để giải thích hoặc mô tả cách một hành động được thực hiện như thế nào. Thường bắt đầu bằng các liên từ: <strong>as</strong> (như là), <strong>as if / as though</strong> (như thể là), và <strong>like</strong> (giống như).</p>
+            
+            <div class="attention-box">
+                <strong>💡 Lưu ý quan trọng với cấu trúc giả định (as if):</strong>
+                <br>Khi diễn tả một giả định không có thật ở hiện tại, ta lùi thì về Quá khứ giả định và sử dụng động từ to-be là <strong>were</strong> cho <strong>tất cả các ngôi / đại từ</strong> (I, he, she, it, we, they).
+            </div>
+
+            <div class="example-block">
+                • <em>Ví dụ:</em> He’s acting <strong>as if</strong> he <strong>were</strong> my father.
+                <br>➔ <small>(Anh ấy hành động như thể anh ấy là bố tôi vậy - thực tế không phải).</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Mệnh đề trạng ngữ chỉ kết quả (Adverbial clauses of result)</h4>
+            <p>Dùng để chỉ ra kết quả, hệ quả trực tiếp của một hành động, tính chất hoặc một tình huống nào đó. Cấu trúc phổ biến nhất là <strong>so... that</strong> và <strong>such... that</strong> (Quá... đến nỗi mà).</p>
+            
+            <div class="formula-box">
+                • Với SO: &nbsp;&nbsp;&nbsp;&nbsp;<strong>S + V + so + Adj / Adv + that + Mệnh đề</strong><br>
+                • Với SUCH: <strong>S + V + such + (a/an) + Adj + Noun (Cụm danh từ) + that + Mệnh đề</strong>
+            </div>
+
+            <div class="example-block">
+                • <em>Ví dụ với SO (Tính từ đứng độc lập):</em>
+                <br>The weather was <strong>so hot that</strong> we couldn’t sleep.
+                <br><br>• <em>Ví dụ với SUCH (Đi kèm một cụm danh từ):</em>
+                <br>It was <strong>such hot weather that</strong> we couldn’t sleep.
+                <br>➔ <small>(Thời tiết quá nóng đến nỗi mà chúng tôi không thể ngủ được).</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">mass media /ˌmæs ˈmiː.di.ə/ <small>(truyền thông đại chúng)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/uka35/uka35396.mp3"></button></div>
+                <div class="vocab-item">correnpondent /ˌkɒr.ɪˈspɒn.dənt/ <small>(phóng viên thường trú)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcor/ukcorps019.mp3"></button></div>
+                <div class="vocab-item">fact-checking /ˈfæktˌtʃek.ɪŋ/ <small>(cách thức/phương thức)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo03/cdo0317factuk1428.mp3"></button></div>
+                <div class="vocab-item">sensationalism /senˈseɪ.ʃən.əl.ɪ.zəm/ <small>(kết quả/hệ quả)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksen/uksen__016.mp3"></button></div>
+                <div class="vocab-item">misinformation /ˌmɪs.ɪn.fəˈmeɪ.ʃən/ <small>(thông tin sai lệch do nhầm lẫn hoặc vô ý)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukm/ukmis/ukmisha008.mp3"></button></div>
+                <div class="vocab-item">disinformation /ˌdɪs.ɪn.fəˈmeɪ.ʃən/ <small>(thông tin sai lệch phát tán có chủ đích)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdis/ukdisgu028.mp3"></button></div>
+                <div class="vocab-item">editorial /ˌed.ɪˈtɔː.ri.əl/ <small>(bài xã luận)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uke/ukedg/ukedgil014.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="7">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 7</div>
+                
+                <div class="question-item" data-correct="C" data-exp="Theo quy tắc giả định sau liên từ 'as if' để nói về một sự việc không có thật ở hiện tại (Anh ta nói cứ như thể biết tất cả về AI), ta phải chia động từ ở quá khứ giả định. Với động từ to-be, bắt buộc dùng 'were' cho mọi ngôi đại từ. Chọn 'were'.">
+                    <p class="question-text">Câu 1: The news anchor speaks as if he _________ an absolute expert on artificial intelligence.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u7q1" value="A"> is</label>
+                        <label class="option-label"><input type="radio" name="u7q1" value="B"> was</label>
+                        <label class="option-label"><input type="radio" name="u7q1" value="C"> were</label>
+                        <label class="option-label"><input type="radio" name="u7q1" value="D"> has been</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Phía sau khoảng trống là từ 'boring' (một tính từ độc lập) kết hợp với mệnh đề chứa 'that' phía sau. Theo cấu trúc chỉ kết quả, ta sử dụng 'so + adj + that'. Chọn 'so'.">
+                    <p class="question-text">Câu 2: The mass media program was _________ boring that most viewers changed the channel.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u7q2" value="A"> so</label>
+                        <label class="option-label"><input type="radio" name="u7q2" value="B"> such</label>
+                        <label class="option-label"><input type="radio" name="u7q2" value="C"> very</label>
+                        <label class="option-label"><input type="radio" name="u7q2" value="D"> too</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="B" data-exp="Phía sau khoảng trống là cụm 'a sensational story' (bao gồm mạo từ 'a' + tính từ + danh từ số ít) và theo sau bởi 'that'. Dựa vào công thức chỉ kết quả với cụm danh từ, ta phải chọn 'such'.">
+                    <p class="question-text">Câu 3: It was _________ a sensational story that it went viral on social media within minutes.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u7q3" value="A"> so</label>
+                        <label class="option-label"><input type="radio" name="u7q3" value="B"> such</label>
+                        <label class="option-label"><input type="radio" name="u7q3" value="C"> as</label>
+                        <label class="option-label"><input type="radio" name="u7q3" value="D"> like</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(7)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(8)">Học tiếp Unit 8 ➔</button>
+                </div>
+                <div class="score-box" id="score-u7"></div>
+            </div>
+        </section>
+
+        <section id="unit-8" class="unit-card">
+            <h2 class="unit-title">Unit 8: Wildlife conservation (Bảo tồn động vật hoang dã)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Mệnh đề trạng ngữ chỉ Điều kiện và So sánh (Adverbial clauses of condition and comparison)</h3>
+            <p>Mệnh đề trạng ngữ phụ thuộc trong chương này giúp xác định điều kiện để một sự việc xảy ra hoặc thực hiện chức năng đối chiếu tính chất, số lượng giữa các đối tượng hoang dã.</p>
+
+            <h4 style="color: var(--primary-color);">I. Mệnh đề trạng ngữ chỉ điều kiện (Adverbial clauses of condition)</h4>
+            <p>Dùng để đưa ra kết quả hoặc hệ quả có thể xảy ra của một tình huống, giả định (có thể có thật hoặc chỉ là tưởng tượng). Thường bắt đầu bằng các liên từ: <strong>if</strong> (nếu), <strong>provided that</strong> (giả sử rằng/với điều kiện là), <strong>until</strong> (cho đến khi), hoặc <strong>unless</strong> (trừ khi = if... not).</p>
+            
+            <div class="attention-box">
+                <strong>⚠️ Lưu ý về cấu trúc "Unless":</strong>
+                <br>Bản thân <code>unless</code> đã mang ý nghĩa phủ định ("trừ khi" / "nếu không"). Do đó, mệnh đề đi ngay sau <code>unless</code> luôn chia ở thể <strong>khẳng định</strong>, không dùng thêm <em>not</em>.
+            </div>
+
+            <div class="example-block">
+                • <em>Ví dụ giả định không có thật (Điều kiện loại 2):</em>
+                <br>What would you buy <strong>if</strong> you won the lottery? <small>(Nếu trúng số bạn sẽ mua gì?)</small>
+                <br><br>• <em>Ví dụ điều kiện kiên quyết (Unless):</em>
+                <br>We can’t release injured animals into the wild <strong>unless</strong> they are treated and fully recovered.
+                <br>➔ <small>(Chúng ta không thể thả động vật bị thương về tự nhiên trừ khi chúng được điều trị và hồi phục hoàn toàn).</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Mệnh đề trạng ngữ chỉ so sánh (Adverbial clauses of comparison)</h4>
+            <p>Dùng để đối chiếu, miêu tả một đặc điểm cụ thể (như kỹ năng, kích thước, số lượng) của một sự vật, hiện tượng so với các đối tượng khác. Cấu trúc thường dùng các liên từ: <strong>than</strong> (trong so sánh hơn), <strong>as... as</strong> (trong so sánh ngang bằng), hoặc <strong>as</strong> (như là).</p>
+
+            <div class="example-block">
+                • <em>Ví dụ so sánh hơn (Than):</em>
+                <br>There are more endangered species today <strong>than</strong> there were 50 years ago.
+                <br>➔ <small>(Ngày nay có nhiều loài có nguy cơ tuyệt chủng hơn 50 năm trước).</small>
+                <br><br>• <em>Ví dụ so sánh ngang bằng (As... as):</em>
+                <br>Gibbons are <strong>as</strong> famous for their beautiful singing <strong>as</strong> they are for their swinging movements through the trees.
+                <br>➔ <small>(Vượn nổi tiếng về tiếng hát hay cũng như về các động tác đu đưa của chúng qua các cành cây).</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">conservation /ˌkɒn.səˈveɪ.ʃən/ <small>(sự bảo tồn)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcon/ukconsc023.mp3"></button></div>
+                <div class="vocab-item">biodiversity /ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/ <small>(đa dạng sinh học)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukb/ukb02/ukb02321.mp3"></button></div>
+                <div class="vocab-item">ecosystem /ˈiː.kəʊˌsɪs.təm/ <small>(bị thương)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uke/ukeco/ukecono009.mp3"></button></div>
+                <div class="vocab-item">invasive species /ɪnˈveɪsɪv ˈspiːʃiːz/ <small>(thả tự do/phóng thích)</small> <button class="audio-btn" data-audio="sounds/invasive-species.mp3"></button></div>
+                <div class="vocab-item">overexploitation /ˌəʊ.vər.ek.splɔɪˈteɪ.ʃən/ <small>(khai thác quá mức)</small> <button class="audio-btn" data-audio="sounds/overexploitation.mp3"></button></div>
+                <div class="vocab-item">extinction /ɪkˈstɪŋk.ʃən/ <small>(tuyệt chủng)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uke/ukext/ukexten019.mp3"></button></div>
+                <div class="vocab-item">poaching /ˈpəʊ.tʃɪŋ/ <small>(săn trộm động vật)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo11/cdo1121ukpoac3483.mp3"></button></div>
+                <div class="vocab-item">food chain /ˈfuːd ˌtʃeɪn/ <small>(chuỗi thức ăn)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo02/cdo0216fooduk0760.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="8">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 8</div>
+                
+                <div class="question-item" data-correct="B" data-exp="Dựa vào ngữ cảnh: 'Hệ sinh thái sẽ không thể phục hồi tốt... chúng ta dừng việc chặt phá rừng'. Ta cần một liên từ mang nghĩa phủ định 'nếu không/trừ khi'. Do đó chọn 'unless'. 'If' và 'provided that' mang nghĩa khẳng định sẽ làm câu ngược nghĩa.">
+                    <p class="question-text">Câu 1: The local ecosystem will not recover successfully _________ we stop illegal logging immediately.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u8q1" value="A"> if</label>
+                        <label class="option-label"><input type="radio" name="u8q1" value="B"> unless</label>
+                        <label class="option-label"><input type="radio" name="u8q1" value="C"> provided that</label>
+                        <label class="option-label"><input type="radio" name="u8q1" value="D"> until</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="C" data-exp="Câu xuất hiện từ 'more' (nhiều hơn) ở vế trước, đây là dấu hiệu của cấu trúc so sánh hơn. Mệnh đề trạng ngữ so sánh hơn sẽ bắt đầu bằng liên từ 'than'. Chọn 'than'.">
+                    <p class="question-text">Câu 2: National parks protect more wild animals now _________ they did in the last decade.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u8q2" value="A"> as</label>
+                        <label class="option-label"><input type="radio" name="u8q2" value="B"> as if</label>
+                        <label class="option-label"><input type="radio" name="u8q2" value="C"> than</label>
+                        <label class="option-label"><input type="radio" name="u8q2" value="D"> like</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Câu sử dụng cấu trúc so sánh ngang bằng với tính từ 'vulnerable' (dễ bị tổn thương). Cấu trúc chuẩn là 'as + adj + as'. Do phía sau đã có từ 'as' thứ hai, vị trí trống cần điền từ 'as' thứ nhất.">
+                    <p class="question-text">Câu 3: African elephants are _________ vulnerable to habitat loss as they are to illegal poaching.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u8q3" value="A"> as</label>
+                        <label class="option-label"><input type="radio" name="u8q3" value="B"> than</label>
+                        <label class="option-label"><input type="radio" name="u8q3" value="C"> more</label>
+                        <label class="option-label"><input type="radio" name="u8q3" value="D"> so</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(8)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(9)">Học tiếp Unit 9 ➔</button>
+                </div>
+                <div class="score-box" id="score-u8"></div>
+            </div>
+        </section>
+
+        <section id="unit-9" class="unit-card">
+            <h2 class="unit-title">Unit 9: Career paths (Con đường sự nghiệp)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Cụm động từ có 3 từ (Three-word phrasal verbs)</h3>
+            <p>Bên cạnh các cụm động từ gồm 2 thành phần thông thường, hệ thống tiếng Anh còn sở hữu các cụm động từ gồm 3 thành phần cố định. Cấu trúc cấu tạo chung của nhóm này luôn tuân theo quy luật:</p>
+            
+            <div class="formula-box">
+                Cấu trúc: Động từ (Verb) + Trạng từ (Adverb) + Giới từ (Preposition)
+            </div>
+
+            <div class="attention-box">
+                <strong>⚠️ Quy tắc ngữ pháp bắt buộc:</strong>
+                <br>Các cụm động từ gồm 3 từ thuộc nhóm ngoại động từ không thể tách rời (Inseparable Transitive Phrasal Verbs). Điều này có nghĩa là chúng <strong>luôn luôn cần một tân ngữ (Object) theo ngay sau giới từ cuối cùng</strong> để câu có nghĩa hoàn chỉnh.
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">I. Nhóm cụm động từ mang nghĩa tường minh (Literal Meaning)</h4>
+            <p>Đây là những cụm từ có ý nghĩa rõ ràng, người học hoàn toàn có thể dễ dàng suy đoán, nhận diện được nghĩa tổng thể dựa vào nghĩa gốc của từng từ cấu thành.</p>
+            
+            <div class="example-block">
+                • <strong>walk away from</strong> (đi bộ ra khỏi ai / cái gì):
+                <br>👉 The driver <strong>walked away from</strong> the burning car. <small>(Người lái xe bỏ chạy khỏi chiếc xe đang cháy).</small>
+                <br><br>• <strong>climb out through</strong> (leo / trèo ra ngoài qua cái gì):
+                <br>👉 The thief <strong>climbed out through</strong> the window. <small>(Tên trộm trèo ra ngoài qua cửa sổ).</small>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Nhóm cụm động từ mang nghĩa hàm ẩn/thành ngữ (Idiomatic Meaning)</h4>
+            <p>Nhóm này có ngữ nghĩa thay đổi hoàn toàn, mang tính chất như một thành ngữ nên rất khó để đoán nếu chỉ dựa vào các thành phần từ riêng lẻ. Người học cần học thuộc lòng ngữ cảnh áp dụng.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Cụm động từ 3 từ</th>
+                        <th style="width: 30%;">Ý nghĩa cốt lõi</th>
+                        <th style="width: 40%;">Ví dụ minh họa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>live up to</strong></td>
+                        <td>Đáp ứng mong đợi, kỳ vọng</td>
+                        <td>• He strives to <strong>live up to</strong> his parents' expectations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>cut down on</strong></td>
+                        <td>Cắt giảm (số lượng, chi phí)</td>
+                        <td>• Companies are trying to <strong>cut down on</strong> operational costs.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>get on with</strong></td>
+                        <td>Hòa hợp, hòa đồng với ai</td>
+                        <td>• She <strong>gets on with</strong> all the members of her team.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>put up with</strong></td>
+                        <td>Chịu đựng (ai / việc gì xấu)</td>
+                        <td>• I can’t <strong>put up with</strong> his bad behaviour any longer.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>go in for</strong></td>
+                        <td>Có sở thích / tham gia vào</td>
+                        <td>• Do you <strong>go in for</strong> any professional sports?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>get through to</strong></td>
+                        <td>Liên lạc được bằng điện thoại</td>
+                        <td>• I finally <strong>get through to</strong> the career consultant.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>look forward to</strong></td>
+                        <td>Mong chờ, mong đợi (+ V-ing)</td>
+                        <td>• Graduates <strong>look forward to</strong> finding good jobs.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>keep up with</strong></td>
+                        <td>Bắt kịp / theo kịp thời đại</td>
+                        <td>• Employees must <strong>keep up with</strong> recent market developments.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">career path /ˈkəˈrɪər pɑːθ/ <small>(con đường sự nghiệp)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cbe/cbedu/cbeduk01241.mp3"></button></div>
+                <div class="vocab-item">occupation /ˌɒk.jəˈpeɪ.ʃən/ <small>(nghề nghiệp, công việc)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uko/ukobs/ukobsti030.mp3"></button></div>
+                <div class="vocab-item">expertise /ˌek.spɜːˈtiːz/ <small>(chuyên môn sâu)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uke/ukexp/ukexper009.mp3"></button></div>
+                <div class="vocab-item">competence /ˈkɒm.pɪ.təns/ <small>(năng lực)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcom/ukcompa024.mp3"></button></div>
+                <div class="vocab-item">consultant /kənˈsʌl.tənt/ <small>(người tư vấn/cố vấn)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcon/ukconst012.mp3"></button></div>
+                <div class="vocab-item">professional /prəˈfeʃ.ən.əl/ <small>(chuyên nghiệp)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpro/ukprod_023.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="9">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 9</div>
+                
+                <div class="question-item" data-correct="D" data-exp="Dựa vào ngữ cảnh câu: 'Để thành công trong ngành công nghệ, các lập trình viên phải liên tục học tập các xu hướng phát triển mới nhất'. Cụm động từ mang nghĩa học tập/bắt kịp các phát triển gần đây là 'keep up with'.">
+                    <p class="question-text">Câu 1: To succeed in the tech industry, programmers must constantly _________ recent technological developments.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u9q1" value="A"> walk away from</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="B"> put up with</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="C"> live up to</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="D"> keep up with</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Xét ý nghĩa của câu: 'Cô ấy quyết định nghỉ việc và từ bỏ môi trường làm việc độc hại'. Cụm động từ chỉ xu hướng rời bỏ, đi ra khỏi một nơi/ai đó là 'walk away from'. Các từ còn lại không hợp nghĩa: get on with (hòa hợp), look forward to (mong đợi), live up to (đáp ứng kỳ vọng).">
+                    <p class="question-text">Câu 2: After careful consideration, she decided to _________ her stressful corporate job and start her own business.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u9q1" value="A"> walk away from</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="B"> get on with</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="C"> look forward to</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="D"> live up to</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="C" data-exp="Cấu trúc 'look forward to' (mong đợi, trông ngóng cái gì) có một đặc tính ngữ pháp rất đặc biệt: Giới từ 'to' ở đây đi kèm với danh từ hoặc danh động từ (V-ing). Vì vậy, động từ 'meet' phải chuyển thành 'meeting'. Chọn 'look forward to meeting'.">
+                    <p class="question-text">Câu 3: All applicants are highly qualified, and the hiring committee is _________ them next Monday.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u9q1" value="A"> putting up with meet</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="B"> looking forward to meet</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="C"> looking forward to meeting</label>
+                        <label class="option-label"><input type="radio" name="u9q1" value="D"> keeping up with meeting</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(9)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="navigateUnit(10)">Học tiếp Unit 10 ➔</button>
+                </div>
+                <div class="score-box" id="score-u9"></div>
+            </div>
+        </section>
+
+        <section id="unit-10" class="unit-card">
+            <h2 class="unit-title">Unit 10: Lifelong learning (Học tập suốt đời)</h2>
+            
+            <h3>1. Ngữ pháp (Grammar): Câu tường thuật mệnh lệnh, yêu cầu, lời đề nghị và lời khuyên (Reported speech: reporting orders, requests, offers, and advice)</h3>
+            <p>Khi chuyển đổi từ câu trực tiếp sang câu gián tiếp mang tính chất cầu khiến, khuyên nhủ, ra lệnh hoặc đề nghị, cấu trúc thường được biến đổi linh hoạt bằng cách sử dụng <strong>mệnh đề động từ nguyên mẫu có "to" (to-infinitive)</strong> thay vì lùi thì trong mệnh đề chứa "that".</p>
+
+            <h4 style="color: var(--primary-color);">I. Nhóm động từ tường thuật đi kèm Tân ngữ (Verb + Object + To-infinitive)</h4>
+            <p>Được sử dụng phổ biến khi tường thuật lại các lời dặn dò, mệnh lệnh, yêu cầu, hướng dẫn hoặc lời khuyên. Thay vì chỉ dùng <em>say</em> hoặc <em>tell</em>, hệ thống động từ tường thuật được mở rộng để làm rõ sắc thái biểu đạt:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Sắc thái biểu đạt</th>
+                        <th style="width: 35%;">Động từ tường thuật thông dụng</th>
+                        <th style="width: 40%;">Ví dụ chuyển đổi gián tiếp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mệnh lệnh / Ra lệnh</strong></td>
+                        <td><em>tell</em> (bảo), <em>command / order</em> (ra lệnh), <em>instruct</em> (hướng dẫn)</td>
+                        <td>• The club leader <strong>told/ordered Mark to sit down</strong> and stop interrupting the talk.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yêu cầu / Mời gọi</strong></td>
+                        <td><em>ask</em> (yêu cầu/nhờ), <em>invite</em> (mời), <em>remind</em> (nhắc nhở)</td>
+                        <td>• I <strong>asked my teacher to show</strong> me how to register for the course.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Khuyên nhủ / Thuyết phục</strong></td>
+                        <td><em>advise</em> (khuyên), <em>encourage</em> (khuyến khích), <em>persuade</em> (thuyết phục), <em>warn</em> (cảnh báo)</td>
+                        <td>• My fitness instructor <strong>advised me to take up</strong> a sport to keep fit.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="attention-box">
+                <strong>⚠️ Quy tắc phủ định (Mệnh lệnh / Yêu cầu cấm đoán):</strong>
+                <br>Khi tường thuật các câu mệnh lệnh hoặc yêu cầu ở dạng phủ định (thường bắt đầu bằng <em>Don't...</em>), ta áp dụng cấu trúc: <strong>S + động từ tường thuật + Object + NOT + to-V</strong>.
+                <br><br>
+                • <em>Trực tiếp:</em> "Don't stay out late, Mark," his mother said.
+                <br>• <em>Gián tiếp:</em> Mark's mother told/warned him <strong>not to stay</strong> out late.
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 25px;">II. Nhóm động từ tường thuật KHÔNG đi kèm Tân ngữ (Verb + To-infinitive)</h4>
+            <p>Một số động từ tường thuật đặc biệt như <strong>offer</strong> (đề nghị giúp/cho ai), <strong>propose</strong> (đề xuất), <strong>agree</strong> (đồng ý), và <strong>demand</strong> (yêu cầu đòi hỏi) tuyệt đối <strong>không thể được theo sau bởi một tân ngữ</strong> trước mệnh đề to-infinitive.</p>
+
+            <div class="formula-box">
+                Cấu trúc đúng: S + offer / agree / propose / demand + TO-V (Không xen tân ngữ ở giữa)
+            </div>
+
+            <div class="example-block">
+                • <strong>Tường thuật lời đề nghị giúp đỡ (Offer):</strong>
+                <br>👉 <em>Trực tiếp:</em> "I'll pay for your driving lessons," my brother said.
+                <br>👉 <em>Gián tiếp:</em> My brother <strong>offered to pay</strong> for my driving lessons. <small>(Anh trai tôi đề nghị trả tiền học lái xe cho tôi).</small>
+                <br><br>• <strong>Tường thuật sự đồng thuận (Agree):</strong>
+                <br>👉 <em>Trực tiếp:</em> "OK, Mai, we'll pay for the online course," Mai's parents said.
+                <br>👉 <em>Gián tiếp:</em> Mai's parents <strong>agreed to pay</strong> for the online course. <small>(Bố mẹ của Mai đồng ý trả tiền cho khóa học trực tuyến).</small>
+            </div>
+
+            <h3>2. Từ vựng trọng tâm (Vocabulary)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item">lifelong learning /ˈlaɪflɒŋ ˈlɜːnɪŋ/ <small>(học tập suốt đời)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cbe/cbedu/cbeduk05872.mp3"></button></div>
+                <div class="vocab-item">self-directed learning /sɛlf-daɪˈrɛktɪd ˈlɜːnɪŋ/ <small>(tự học có định hướng)</small> <button class="audio-btn" data-audio="sounds/self-directed-learning.mp3"></button></div>
+                <div class="vocab-item">critical thinking /ˌkrɪt.ɪ.kəl ˈθɪŋ.kɪŋ/ <small>(tư duy phản biện)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/c/cal/cald4/cald4uk0362.mp3"></button></div>
+                <div class="vocab-item">adaptability /əˌdæp.təˈbɪl.ə.ti/ <small>(nhắc nhở)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/uka/ukact/ukactiv030.mp3"></button></div>
+                <div class="vocab-item">e-learning /ˈiːˌlɜː.nɪŋ/ <small>(học trực tuyến)</small> <button class="audio-btn" data-audio="https://dictionary.cambridge.org/media/english/uk_pron/u/ukl/ukl30/ukl30135.mp3"></button></div>
+                <div class="vocab-item">microlearning /ˈmaɪ.krəʊˌlɜː.nɪŋ/ <small>(học qua các bài học ngắn)</small> <button class="audio-btn" data-audio="sounds/microlearning.mp3"></button></div>
+                <div class="vocab-item">peer learning /ˈpɪə ˌlɜː.nɪŋ/ <small>(học hỏi lẫn nhau)</small> <button class="audio-btn" data-audio="sounds/peer-learning.mp3"></button></div>
+            </div>
+
+            <div class="quiz-section" data-unit="10">
+                <div class="quiz-header">✍️ Bài tập củng cố Unit 10</div>
+                
+                <div class="question-item" data-correct="C" data-exp="Câu gốc mang tính chất một lời khuyên cấu trúc 'You should...'. Khi chuyển sang gián tiếp sử dụng động từ 'advised', ta áp dụng công thức: 'S + advised + O + to-V'. Do đó, phương án đúng phải là 'advised me to enroll'.">
+                    <p class="question-text">Câu 1: 'You should enroll in the data science course for lifelong learning,' my mentor said to me.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u10q1" value="A"> My mentor advised me enrolling in the data science course.</label>
+                        <label class="option-label"><input type="radio" name="u10q1" value="B"> My mentor said me to enroll in the data science course.</label>
+                        <label class="option-label"><input type="radio" name="u10q1" value="C"> My mentor advised me to enroll in the data science course.</label>
+                        <label class="option-label"><input type="radio" name="u10q1" value="D"> My mentor offered me to enroll in the data science course.</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="D" data-exp="Câu trực tiếp là một câu cấm đoán bắt đầu bằng 'Don't...'. Khi chuyển sang câu tường thuật phủ định, vị trí của trạng từ 'not' phải đứng ngay trước 'to-infinitive' (not + to-V). Do đó, cụm cấu trúc chính xác là 'reminded us not to forget'.">
+                    <p class="question-text">Câu 2: 'Don't forget to submit your assignments by midnight,' the instructor reminded us.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u10q2" value="A"> The instructor reminded us to not forget to submit our assignments.</label>
+                        <label class="option-label"><input type="radio" name="u10q2" value="B"> The instructor reminded us forgot not to submit our assignments.</label>
+                        <label class="option-label"><input type="radio" name="u10q2" value="C"> The instructor reminded not to us to forget to submit our assignments.</label>
+                        <label class="option-label"><input type="radio" name="u10q2" value="D"> The instructor reminded us not to forget to submit our assignments.</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="question-item" data-correct="A" data-exp="Động từ 'offer' (đề nghị) thuộc nhóm không đi kèm tân ngữ trực tiếp đứng trước mệnh đề to-V. Cấu trúc chuẩn xác là 'S + offered + to-V'. Vì vậy, phương án 'offered to help' là lựa chọn duy nhất đúng ngữ pháp.">
+                    <p class="question-text">Câu 3: 'I will help you set up your online learning account, Linh,' Minh said.</p>
+                    <div class="options-list">
+                        <label class="option-label"><input type="radio" name="u10q3" value="A"> Minh offered to help Linh set up her online learning account.</label>
+                        <label class="option-label"><input type="radio" name="u10q3" value="B"> Minh offered Linh to help her set up her online learning account.</label>
+                        <label class="option-label"><input type="radio" name="u10q3" value="C"> Minh advised Linh helping her set up her online learning account.</label>
+                        <label class="option-label"><input type="radio" name="u10q3" value="D"> Minh agreed Linh to help her set up her online learning account.</label>
+                    </div>
+                    <div class="explanation"></div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-submit" onclick="gradeQuiz(10)">Chấm điểm</button>
+                    <button class="btn btn-nav" onclick="window.location.href='https://hoctienganhcungtruong.github.io';">Học tiếp</button>
+                </div>
+                <div class="score-box" id="score-u10"></div>
+            </div>
+        </section>
+        </div>
+
+  <script src="index.js"></script>
+  <script type="text/javascript">var lbplugin_event_opt={"extension_enable":true,"dict_type":1,"dbclk_event":{"trigger":"none","enable":true,"display":1},"select_event":{"trigger":"none","enable":true,"display":1}};function loadScript(t,e){var n=document.createElement("script");n.type="text/javascript",n.readyState?n.onreadystatechange=function(){("loaded"===n.readyState||"complete"===n.readyState)&&(n.onreadystatechange=null,e())}:n.onload=function(){e()},n.src=t,document.getElementsByTagName("head")[0].appendChild(n)}setTimeout(function(){null==document.getElementById("lbdictex_find_popup")&&loadScript("https://stc-laban.zdn.vn/dictionary/js/plugin/lbdictplugin.min.js?"+Date.now()%1e4,function(){lbDictPlugin.init(lbplugin_event_opt)})},1e3);</script>
+
+</body>
+</html>
