@@ -16,9 +16,12 @@
     --formula-bg: #f8fafc;
     --note-bg: #fffbeb;
     --note-text: #b45309;
-    --example-bg: #f0fdf4;
+    --example-bg: #eff6ff;
     --quiz-bg: #fafafa;
     --input-bg: #ffffff;
+    --attention-bg: #fffbeb;
+    --attention-text: #b45309;
+    --attention-border: #f59e0b;
     --btn-audio-bg: rgba(0, 0, 0, 0.06);
     --btn-audio-border: rgba(0, 0, 0, 0.12);
     --btn-audio-hover: rgba(0, 0, 0, 0.12);
@@ -47,6 +50,9 @@
     --example-bg: #062f1c;
     --quiz-bg: #111827;
     --input-bg: #1f2937;
+    --attention-bg: #1e1b4b;
+    --attention-text: #fde047;
+    --attention-border: #eab308;
     --btn-audio-bg: rgba(255, 255, 255, 0.1);
     --btn-audio-border: rgba(255, 255, 255, 0.18);
     --btn-audio-hover: rgba(255, 255, 255, 0.22);
@@ -302,6 +308,17 @@ h3 {
 
 .example-block p {
     margin: 0.25rem 0;
+}
+
+.attention-box {
+    background-color: var(--attention-bg);
+    border-left: 5px solid var(--attention-border);
+    padding: 1.1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--attention-text);
+    box-shadow: 0 4px 12px -5px rgba(16, 185, 129, 0.1);
 }
 
 .badge {
