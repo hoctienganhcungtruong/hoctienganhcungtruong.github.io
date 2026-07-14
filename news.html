@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="https://cdn.discordapp.com/avatars/1252452847962820699/786f76b53ded5a446ee3b3213759a96d.png">
     <title>The Cosmic Chronicle</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IM+Fell+English+SC&family=Courier+Prime&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght=0,400;0,700;1,400&family=IM+Fell+English+SC&family=Courier+Prime&display=swap');
 
         * {
             box-sizing: border-box;
@@ -17,7 +17,7 @@
             color: #1c1a16;
             font-family: 'Playfair Display', serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px; /* Reduced for small mobile borders */
             line-height: 1.4;
         }
 
@@ -26,7 +26,7 @@
             max-width: 1300px;
             margin: 0 auto;
             border: 4px double #1c1a16;
-            padding: 20px;
+            padding: 15px; /* Slightly tighter for mobile */
             background-color: #fbf6e3;
             box-shadow: 0 0 20px rgba(0,0,0,0.15);
         }
@@ -41,32 +41,35 @@
 
         .meta-top {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Stacked layout by default on tiny screens */
+            gap: 5px;
             font-family: 'Courier Prime', monospace;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             border-bottom: 1px solid #1c1a16;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
             margin-bottom: 15px;
         }
 
         h1.masthead {
             font-family: 'Cinzel Decorative', serif;
-            font-size: 4.5rem;
+            font-size: 2.2rem; /* Scaled down base for mobile */
             margin: 10px 0;
-            letter-spacing: -2px;
-            line-height: 1;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            word-wrap: break-word;
         }
 
         .meta-bottom {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 8px;
             align-items: center;
             font-family: 'IM Fell English SC', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             border-top: 2px solid #1c1a16;
             border-bottom: 2px solid #1c1a16;
-            padding: 5px 0;
+            padding: 8px 0;
             margin-top: 10px;
         }
 
@@ -76,30 +79,28 @@
 
         .main-broadsheet {
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 25px;
         }
 
         /* Column Lines Divider Technique */
         .col {
-            padding: 0 10px;
+            padding: 0;
         }
-        .col-left { border-right: 1px solid #1c1a16; }
-        .col-right { border-left: 1px solid #1c1a16; }
 
         /* Typography Quirks */
         h2.headline {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            line-height: 1.1;
+            line-height: 1.2;
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-align: center;
             text-transform: uppercase;
         }
 
         h3.subhead {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-style: italic;
             text-align: center;
             margin-bottom: 15px;
@@ -108,9 +109,9 @@
 
         .drop-cap::first-letter {
             font-family: 'Cinzel Decorative', serif;
-            font-size: 4.2rem;
+            font-size: 3.5rem; /* Slightly smaller for mobile layout scaling */
             float: left;
-            margin-top: 6px;
+            margin-top: 4px;
             margin-right: 8px;
             line-height: 0.8;
         }
@@ -134,7 +135,7 @@
 
         .canvas-frame {
             border: 2px solid #1c1a16;
-            padding: 5px;
+            padding: 4px;
             background: #1c1a16;
             position: relative;
             width: 100%;
@@ -144,7 +145,7 @@
         canvas {
             display: block;
             width: 100%;
-            height: 400px;
+            height: 300px; /* Reduced default height to fit modern mobile screen viewports nicely */
             background-color: #0d0c0a;
             filter: sepia(0.3) contrast(1.2);
         }
@@ -156,15 +157,16 @@
             margin-top: 8px;
             font-style: italic;
             border-bottom: 1px solid #1c1a16;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             width: 100%;
         }
 
-        /* Controls disguised as vintage levers/buttons */
+        /* Controls optimized for fingers */
         .control-deck {
             margin: 15px 0;
             display: flex;
-            gap: 10px;
+            flex-wrap: wrap; /* Wraps cleanly if screen is too narrow */
+            gap: 8px;
             justify-content: center;
             width: 100%;
         }
@@ -173,12 +175,15 @@
             background-color: #eaddbe;
             border: 2px solid #1c1a16;
             color: #1c1a16;
-            padding: 5px 15px;
+            padding: 8px 12px; /* Enhanced touch padding */
             font-family: 'IM Fell English SC', serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             cursor: pointer;
             box-shadow: 2px 2px 0px #1c1a16;
             transition: all 0.1s ease;
+            flex-grow: 1; /* Helps layout stay uniform across mobile widths */
+            max-width: 200px;
+            text-align: center;
         }
 
         .vintage-btn:active {
@@ -207,16 +212,28 @@
             margin-bottom: 5px;
         }
 
-        /* Responsive design for smaller screens */
-        @media (max-width: 900px) {
+        /* --- RESPONSIVE TABLET & DESKTOP UPGRADES --- */
+        @media (min-width: 600px) {
+            body { padding: 20px; }
+            .container { padding: 20px; }
+            .meta-top { flex-direction: row; justify-content: space-between; }
+            .meta-bottom { flex-direction: row; justify-content: space-between; }
+            h1.masthead { font-size: 3.5rem; }
+            canvas { height: 350px; }
+        }
+
+        @media (min-width: 950px) {
+            h1.masthead { font-size: 4.5rem; letter-spacing: -2px; }
+            h2.headline { font-size: 2.2rem; }
             .main-broadsheet {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 2fr 1fr;
+                gap: 20px;
             }
-            .col-left, .col-right {
-                border: none;
-                border-top: 1px solid #1c1a16;
-                padding-top: 20px;
-            }
+            .col { padding: 0 10px; }
+            .col-left { border-right: 1px solid #1c1a16; }
+            .col-right { border-left: 1px solid #1c1a16; }
+            canvas { height: 400px; }
+            .vintage-btn { flex-grow: 0; }
         }
     </style>
 </head>
@@ -233,7 +250,7 @@
         <h1 class="masthead">The Cosmic Chronicle</h1>
         <div class="meta-bottom">
             <span>LONDON & NEW YORK, TUESDAY</span>
-            <span style="font-size: 1.5rem; font-weight: bold;">THE UNIVERSE UNVEILED</span>
+            <span style="font-size: 1.4rem; font-weight: bold; text-align: center;">THE UNIVERSE UNVEILED</span>
             <span class="price">PRICE: ONE SHILLING</span>
         </div>
     </header>
@@ -255,7 +272,7 @@
         </div>
 
         <div class="col visual-center">
-            <h2 class="headline" style="font-size: 2.8rem; letter-spacing: -1px;">An Illustrated Orrery of the Infinite</h2>
+            <h2 class="headline" style="letter-spacing: -1px;">An Illustrated Orrery of the Infinite</h2>
             <h3 class="subhead">Interactive engraving demonstrating structural systems of the cosmos.</h3>
             
             <div class="control-deck">
@@ -287,7 +304,6 @@
     </main>
 </div>
 
-<!-- --- VISUALIZATION ENGINE (JS) --- -->
 <script>
     const canvas = document.getElementById('cosmicCanvas');
     const ctx = canvas.getContext('2d');
@@ -297,11 +313,18 @@
     let animationFrameId;
     let ticks = 0;
 
-    // Handle resizing beautifully
+    // Handle resizing beautifully across devices
     function resizeCanvas() {
         const rect = canvas.parentElement.getBoundingClientRect();
         canvas.width = rect.width - 10; // offset padding
-        canvas.height = 400;
+        // Preserve variable height scaling based on window width
+        if (window.innerWidth < 600) {
+            canvas.height = 300;
+        } else if (window.innerWidth < 950) {
+            canvas.height = 350;
+        } else {
+            canvas.height = 400;
+        }
     }
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
@@ -311,7 +334,6 @@
         currentView = viewType;
         document.querySelectorAll('.vintage-btn').forEach(btn => btn.classList.remove('active'));
         
-        // Find which button was clicked and make active
         if(viewType === 'solar') {
             document.querySelectorAll('.vintage-btn')[0].classList.add('active');
             caption.innerText = "Fig. 1 — A mechanical rendering of our immediate Sun-centric system, demonstrating the orbital mechanics calculated by Mr. Isaac Newton.";
@@ -345,13 +367,14 @@
             ctx.stroke();
         }
 
-        // Draw Orbits & Planets
-        const orbits = [55, 95, 140, 185];
+        // Draw Orbits & Planets (Dynamically scaled orbit sizing for mobile widths)
+        const scaleFactor = Math.min(canvas.width / 500, 1);
+        const orbits = [55 * scaleFactor, 95 * scaleFactor, 140 * scaleFactor, 185 * scaleFactor];
         const speeds = [0.04, 0.02, 0.012, 0.007];
         const radii = [3, 4, 6, 5];
 
         orbits.forEach((dist, idx) => {
-            // Orbit Ring (dashed style like an old blueprint)
+            // Orbit Ring
             ctx.strokeStyle = 'rgba(244, 237, 210, 0.15)';
             ctx.setLineDash([4, 4]);
             ctx.beginPath();
@@ -387,19 +410,16 @@
         
         for (let i = 0; i < arms; i++) {
             for (let j = 0; j < particlesPerArm; j++) {
-                // Golden spiral geometry calculation
                 let factor = j / particlesPerArm;
                 let angle = factor * 5 + (i * Math.PI) + (ticks * 0.005);
                 let distance = factor * (canvas.height / 2.2);
                 
-                // Add tiny jitter to simulate stardust scatter
                 let jitterX = (Math.sin(j * 432.12) * 12) * (factor + 0.1);
                 let jitterY = (Math.cos(j * 123.45) * 12) * (factor + 0.1);
 
                 let x = cx + Math.cos(angle) * distance + jitterX;
                 let y = cy + Math.sin(angle) * distance + jitterY;
 
-                // Alternate sizes for starlight contrast
                 let size = (j % 5 === 0) ? 1.5 : 0.8;
                 
                 ctx.beginPath();
@@ -415,7 +435,7 @@
         ctx.fill();
     }
 
-    // Generate static nodes once for Cosmic Web so it doesn't scramble wildly
+    // Generate static nodes once for Cosmic Web
     const webNodes = [];
     for(let i=0; i<45; i++) {
         webNodes.push({
@@ -429,7 +449,6 @@
         const w = canvas.width;
         const h = canvas.height;
 
-        // Draw connections first (the filaments)
         ctx.strokeStyle = 'rgba(244, 237, 210, 0.12)';
         ctx.lineWidth = 1;
         
@@ -443,7 +462,6 @@
                 let x2 = n2.x * w;
                 let y2 = n2.y * h;
 
-                // Check distance
                 let dist = Math.hypot(x1 - x2, y1 - y2);
                 if(dist < 90) {
                     ctx.beginPath();
@@ -454,13 +472,10 @@
             }
         }
 
-        // Draw the galaxy superclusters (the nodes)
         ctx.fillStyle = '#f4edd2';
         webNodes.forEach(node => {
             let x = node.x * w;
             let y = node.y * h;
-            
-            // Subtle vintage pulsing breathing effect
             let pulse = Math.sin(ticks * 0.02 + node.pulseOffset) * 0.8 + 1.5;
 
             ctx.beginPath();
@@ -471,12 +486,9 @@
 
     // loop
     function update() {
-        // Clear frame completely
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
         ticks++;
 
-        // Router
         if (currentView === 'solar') {
             drawSolarSystem();
         } else if (currentView === 'galaxy') {
