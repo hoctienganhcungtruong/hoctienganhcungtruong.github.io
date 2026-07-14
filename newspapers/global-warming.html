@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Global Warming Chronicle</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=IM+Fell+English+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4edd2; /* Aged newsprint paper color */
+            color: #1c1a16;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.45;
+        }
+
+        /* Newspaper Container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            border: 4px double #1c1a16;
+            padding: 20px;
+            background-color: #fbf6e3;
+            box-shadow: 0 0 25px rgba(0,0,0,0.18);
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            text-align: center;
+            border-bottom: 5px double #1c1a16;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+        }
+
+        .meta-top {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid #1c1a16;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        h1.masthead {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.2rem;
+            margin: 10px 0;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            word-wrap: break-word;
+            text-transform: uppercase;
+        }
+
+        .meta-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            font-family: 'IM Fell English SC', serif;
+            font-size: 1rem;
+            border-top: 2px solid #1c1a16;
+            border-bottom: 2px solid #1c1a16;
+            padding: 8px 0;
+            margin-top: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+        /* --- BROADSHEET LAYOUT --- */
+        /* Upper section with 3 columns */
+        .broadsheet-upper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        /* Mid-page thick dividing rule */
+        .section-divider {
+            border-top: 4px double #1c1a16;
+            margin: 30px 0;
+            position: relative;
+            text-align: center;
+        }
+        .section-divider span {
+            background-color: #fbf6e3;
+            font-family: 'IM Fell English SC', serif;
+            position: relative;
+            top: -12px;
+            padding: 0 15px;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        /* Lower section with 2 unequal columns */
+        .broadsheet-lower {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        /* Column Lines Divider Technique */
+        .col {
+            padding: 0;
+        }
+
+        /* Typography Quirks */
+        h2.headline {
+            font-size: 1.7rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        h3.subhead {
+            font-size: 1.05rem;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #3a352a;
+            line-height: 1.3;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3.5rem;
+            float: left;
+            margin-top: 4px;
+            margin-right: 8px;
+            line-height: 0.8;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 20px;
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+        }
+
+        p.no-indent {
+            text-indent: 0;
+        }
+
+        /* --- INTERACTIVE ENGRAVING ORRERY --- */
+        .visual-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .canvas-frame {
+            border: 2px solid #1c1a16;
+            padding: 4px;
+            background: #1c1a16;
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 300px;
+            background-color: #0d0c0a;
+            filter: sepia(0.35) contrast(1.25);
+        }
+
+        .caption {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+            border-bottom: 1px solid #1c1a16;
+            padding-bottom: 15px;
+            width: 100%;
+        }
+
+        /* Controls */
+        .control-deck {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .vintage-btn {
+            background-color: #eaddbe;
+            border: 2px solid #1c1a16;
+            color: #1c1a16;
+            padding: 8px 12px;
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px #1c1a16;
+            transition: all 0.1s ease;
+            flex-grow: 1;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .vintage-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px #1c1a16;
+        }
+
+        .vintage-btn.active {
+            background-color: #1c1a16;
+            color: #f4edd2;
+        }
+
+        /* Advertisements & Side Features */
+        .advertisement {
+            border: 1px dashed #1c1a16;
+            padding: 15px;
+            text-align: center;
+            margin-top: 25px;
+            background-color: #f2e7c4;
+        }
+
+        .adv-title {
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        /* --- RESPONSIVE TABLET & DESKTOP UPGRADES --- */
+        @media (min-width: 600px) {
+            body { padding: 25px; }
+            .container { padding: 30px; }
+            .meta-top { flex-direction: row; justify-content: space-between; }
+            .meta-bottom { flex-direction: row; justify-content: space-between; }
+            h1.masthead { font-size: 3.2rem; }
+            canvas { height: 350px; }
+        }
+
+        @media (min-width: 950px) {
+            h1.masthead { font-size: 4rem; letter-spacing: -2px; }
+            h2.headline { font-size: 2rem; }
+            
+            /* Upper Broadsheet splits to 3 Columns */
+            .broadsheet-upper {
+                grid-template-columns: 1fr 1.8fr 1fr;
+                gap: 20px;
+            }
+            .broadsheet-upper .col-left { border-right: 1px solid #1c1a16; padding-right: 15px; }
+            .broadsheet-upper .col-right { border-left: 1px solid #1c1a16; padding-left: 15px; }
+            
+            /* Lower Broadsheet splits to 2 Columns (Unequal) */
+            .broadsheet-lower {
+                grid-template-columns: 2fr 1fr;
+                gap: 25px;
+            }
+            .broadsheet-lower .col-left { border-right: 1px solid #1c1a16; padding-right: 20px; }
+
+            canvas { height: 380px; }
+            .vintage-btn { flex-grow: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="meta-top">
+            <span>Weather: Increasingly Erratic &amp; Unseasonably Warm</span>
+            <span>Special Environmental Broadside</span>
+            <span>No. 2026.07</span>
+        </div>
+        <h1 class="masthead">The Global Warming Chronicle</h1>
+        <div class="meta-bottom">
+            <span>LONDON, NEW YORK &amp; GENEVA</span>
+            <span style="font-size: 1.3rem; font-weight: bold; text-align: center;">OUR CLIMATE IN FLUX</span>
+            <span class="price">PRICE: ONE SHILLING</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- UPPER BROADSHEET SECTION -->
+        <div class="broadsheet-upper">
+            
+            <!-- Left Column: The Greenhouse Paradox -->
+            <div class="col col-left">
+                <h2 class="headline">The Greenhouse Paradox</h2>
+                <h3 class="subhead">The Invisible Blanket Trapping Our Sphere's Vital Heat</h3>
+                <p class="drop-cap">It is an invisible phenomenon, yet its weight is felt across the continents. Natural philosophers have long understood that our atmosphere acts like a glass greenhouse, cradling the sun’s precious rays to keep our soil fertile and our oceans fluid.</p>
+                <p>Yet, an excess of coal-smoke and modern industrial effluence has begun to thicken this delicate vaporous envelope. The heat, once radiating effortlessly back into the cold starlight, is instead held fast.</p>
+                <p>Scientists warn that we are actively modifying our global air current, creating a persistent, warmth-trapping canopy that grows more impenetrable with each passing decade.</p>
+                
+                <div class="advertisement">
+                    <div class="adv-title">- ADVERTISEMENT -</div>
+                    <strong style="font-family: 'IM Fell English SC', serif; font-size: 1.1rem;">Dr. Higgins’ Ice-Box Parlor</strong>
+                    <p class="no-indent" style="font-size:0.85rem; text-align:center; margin-top:5px;">Preserve your butter and meats against the unseasonal heat waves! High capacity iceboxes delivered directly to your kitchen.</p>
+                </div>
+            </div>
+
+            <!-- Middle Column: Interactive Orrery Engraving -->
+            <div class="col visual-center">
+                <h2 class="headline">Engravings of the Changing Earth</h2>
+                <h3 class="subhead">An interactive mechanical schematic showing the kinetics of our altering biosphere.</h3>
+                
+                <div class="control-deck">
+                    <button class="vintage-btn active" onclick="switchView('cycle')">I. The Greenhouse Cycle</button>
+                    <button class="vintage-btn" onclick="switchView('sealevel')">II. Sea-Level Rise</button>
+                    <button class="vintage-btn" onclick="switchView('solutions')">III. Great Solutions</button>
+                </div>
+
+                <div class="canvas-frame">
+                    <canvas id="climateCanvas" width="590" height="350"></canvas>
+                </div>
+                <div class="caption" id="canvasCaption">Fig. 1 — A mechanical demonstration of shortwave solar radiation passing through our atmosphere, with longwave heat escaping but partially reflected by carbonaceous particles.</div>
+                
+                <br>
+                <p class="no-indent">Toggle the mechanical buttons to observe the schematic changes. These hand-etched ink patterns mimic the style of the Royal Geological Society, rendering complex environmental thermodynamics in simple geometric kinetic lines.</p>
+            </div>
+
+            <!-- Right Column: A Planet Apart -->
+            <div class="col col-right">
+                <h2 class="headline">A Planet Apart</h2>
+                <h3 class="subhead">Observing Venus’s Runaway Greenhouse Catastrophe</h3>
+                <p class="drop-cap">To peer through Dr. Galileo's modern telescope at our neighboring sister planet, Venus, is to witness a terrifying, cautionary tale. Though similar in scale and structure to our Earth, she is shrouded in an eternal, heavy fog of sulfurous vapor.</p>
+                <p>Her surface, once suspected to harbor exotic oceans and swamps, is instead a dry, lead-melting crucible of immense atmospheric pressure and absolute desolation.</p>
+                <p>Philosophers now deduce that Venus succumbed to a runaway greenhouse effect—a runaway engine of heat accumulation that permanently boiled her oceans into space, sealing her fate as a dead furnace. Let us look to the evening star and find caution in her dry, suffocating beauty.</p>
+            </div>
+
+        </div>
+
+        <!-- DIVIDER LINE -->
+        <div class="section-divider">
+            <span>THE UNRAVELING: A HISTORY OF INDUSTRIAL IMPACT</span>
+        </div>
+
+        <!-- LOWER BROADSHEET SECTION -->
+        <div class="broadsheet-lower">
+            
+            <!-- Long Story Column (Left-Heavy) -->
+            <div class="col col-left">
+                <h2 class="headline" style="text-align: left;">Mapping 10,000 Years of Fluctuation vs. the Anthropocene Jolt</h2>
+                <p class="drop-cap">Our historical records, extracted from ancient glacier ice and deep-sea silts, tell of a remarkably stable climatic cradle. For nearly ten thousand years, since the retreat of the last great glacial ice sheet, our species has enjoyed the predictable rhythm of seasons. This stability allowed for the birth of farming, the rise of great brick cities, and the expansion of sail-driven global commerce.</p>
+                <p>There have indeed been gentle tremors in this pattern—such as the "Medieval Warm Period," when grapes grew in northern England, or the "Little Ice Age," when the river Thames froze solid enough to host frost fairs. Yet, these fluctuations were minor ripples compared to the sudden, explosive climb we observe today.</p>
+                <p>Since the steam engine first began to hiss in the late 18th century, the concentration of carbon dioxide in our atmosphere has surged past 400 parts per million—a threshold unseen for over three million years. What once took tens of thousands of years of geological drifting is now occurring in a mere span of generations.</p>
+                <p>Glaciers that stood firm since the era of the Pharaohs are shrinking back into the high peaks, while our oceans, absorbing the vast excess of heat, expand in volume, slowly creeping onto the low-lying coastlines of the world. We are no longer merely living on Earth; we are actively turning its thermostat.</p>
+            </div>
+
+            <!-- Side Commentary & Archive Column (Right) -->
+            <div class="col">
+                <h2 class="headline">Global Despatches</h2>
+                <h3 class="subhead">Dispatches from the Warming Frontiers</h3>
+                
+                <p style="font-size: 0.9rem; border-bottom: 1px dotted #1c1a16; padding-bottom: 10px; margin-bottom: 10px;">
+                    <strong>THE ARCTIC FRONTIER:</strong> Whalers and explorers returning from the northern channels report navigating through waters once permanently choked by thick, blue pack-ice. The Northwest Passage, long a legendary grave for wooden ships, opens wider each summer.
+                </p>
+                
+                <p style="font-size: 0.9rem; border-bottom: 1px dotted #1c1a16; padding-bottom: 10px; margin-bottom: 10px;">
+                    <strong>THE FORESTS AFLAME:</strong> Dry, blistering winds sweeping across the western woodlands have triggered immense conflagrations, reducing ancient pine forests to ash and painting the sunsets in deep, warning crimson.
+                </p>
+
+                <p style="font-size: 0.9rem; margin-bottom: 15px;">
+                    <strong>ACIDIFYING SEAS:</strong> Maritime naturalists observe that our vast oceans, in their grand service of absorbing coal-gas, are turning subtly sour. Coral fortresses of the south seas are losing their brilliant hues, bleaching into skeletal bone-white ruins.
+                </p>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script>
+    const canvas = document.getElementById('climateCanvas');
+    const ctx = canvas.getContext('2d');
+    const caption = document.getElementById('canvasCaption');
+    
+    let currentView = 'cycle';
+    let animationFrameId;
+    let ticks = 0;
+
+    // Responsive sizing
+    function resizeCanvas() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width - 10;
+        if (window.innerWidth < 600) {
+            canvas.height = 300;
+        } else if (window.innerWidth < 950) {
+            canvas.height = 350;
+        } else {
+            canvas.height = 380;
+        }
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // View Changer
+    function switchView(viewType) {
+        currentView = viewType;
+        document.querySelectorAll('.vintage-btn').forEach(btn => btn.classList.remove('active'));
+        
+        if(viewType === 'cycle') {
+            document.querySelectorAll('.vintage-btn')[0].classList.add('active');
+            caption.innerText = "Fig. 1 — A mechanical demonstration of shortwave solar radiation passing through our atmosphere, with longwave heat escaping but partially reflected by carbonaceous particles.";
+        } else if(viewType === 'sealevel') {
+            document.querySelectorAll('.vintage-btn')[1].classList.add('active');
+            caption.innerText = "Fig. 2 — A cross-section of glacial retreat. Thermal expansion of coastal waters combined with mountain ice melt results in rising tides encroaching on low-lying land.";
+        } else if(viewType === 'solutions') {
+            document.querySelectorAll('.vintage-btn')[2].classList.add('active');
+            caption.innerText = "Fig. 3 — A conceptual engine mapping wind-turbines, clean light, and deep forestation working to siphon off coal gases and stabilize our delicate atmospheric envelope.";
+        }
+    }
+
+    // --- RENDERINGS (Etched Ink Aesthetic) ---
+    
+    // View I: Greenhouse Cycle
+    function drawGreenhouseCycle() {
+        const cx = canvas.width / 2;
+        const cy = canvas.height / 2;
+        const w = canvas.width;
+        const h = canvas.height;
+
+        // Draw Earth Curve at bottom
+        ctx.strokeStyle = '#f4edd2';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(cx, cy + 180, 200, Math.PI, 0);
+        ctx.stroke();
+
+        // Atmospheric Layer
+        ctx.strokeStyle = 'rgba(244, 237, 210, 0.3)';
+        ctx.setLineDash([6, 6]);
+        ctx.beginPath();
+        ctx.arc(cx, cy + 180, 260, Math.PI, 0);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Text label
+        ctx.fillStyle = '#f4edd2';
+        ctx.font = '10px Courier Prime';
+        ctx.fillText("ATMOSPHERE", cx - 30, cy - 60);
+        ctx.fillText("CRUST", cx - 15, cy + 80);
+
+        // Sun in upper left
+        ctx.beginPath();
+        ctx.arc(60, 60, 20, 0, Math.PI*2);
+        ctx.stroke();
+        for(let i=0; i<8; i++) {
+            let angle = (i * Math.PI / 4) + ticks * 0.005;
+            ctx.beginPath();
+            ctx.moveTo(60 + Math.cos(angle)*25, 60 + Math.sin(angle)*25);
+            ctx.lineTo(60 + Math.cos(angle)*35, 60 + Math.sin(angle)*35);
+            ctx.stroke();
+        }
+
+        // Sunlight Ray (Incoming Shortwave)
+        ctx.strokeStyle = 'rgba(244, 237, 210, 0.8)';
+        ctx.beginPath();
+        ctx.moveTo(85, 85);
+        ctx.lineTo(cx - 30, cy + 20);
+        ctx.stroke();
+
+        // Arrow head incoming
+        drawArrowhead(cx - 30, cy + 20, Math.atan2((cy + 20) - 85, (cx - 30) - 85));
+
+        // Reflected Heat Rays (Outgoing Longwave)
+        let rayProgress = (ticks * 1.5) % 150;
+        let rx = cx - 30;
+        let ry = cy + 20;
+
+        ctx.strokeStyle = '#f4edd2';
+        ctx.setLineDash([2, 4]);
+        ctx.beginPath();
+        ctx.moveTo(rx, ry);
+        // Bounce path
+        ctx.lineTo(cx + 40, cy - 40); // To atmosphere
+        ctx.lineTo(cx + 80, cy + 40); // Bounced back to earth
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Small floating carbon particles (The Greenhouse Gases)
+        for(let i=0; i<12; i++) {
+            let px = cx + Math.sin(i * 123.45) * 140;
+            let py = (cy - 40) + Math.cos(i * 456.78) * 30;
+            ctx.fillStyle = 'rgba(244, 237, 210, 0.7)';
+            ctx.beginPath();
+            ctx.arc(px, py, 2, 0, Math.PI*2);
+            ctx.fill();
+        }
+    }
+
+    // View II: Sea Level Rise
+    function drawSeaLevel() {
+        const w = canvas.width;
+        const h = canvas.height;
+
+        // Draw Glacial Mountain on Left
+        ctx.strokeStyle = '#f4edd2';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(0, h - 50);
+        ctx.lineTo(100, h - 220);
+        ctx.lineTo(160, h - 180);
+        ctx.lineTo(250, h - 50);
+        ctx.stroke();
+
+        // Ice Cap on Mountain (shrinking animation)
+        let meltFactor = 0.5 + Math.sin(ticks * 0.02) * 0.2; // Pulsing melt visual
+        ctx.fillStyle = '#f4edd2';
+        ctx.beginPath();
+        ctx.moveTo(70, h - 169);
+        ctx.lineTo(100, h - 220);
+        ctx.lineTo(130, h - 200);
+        ctx.lineTo(110, h - 160 + (meltFactor * 10));
+        ctx.closePath();
+        ctx.fill();
+
+        // Mountain Water runoff lines
+        ctx.strokeStyle = 'rgba(244, 237, 210, 0.4)';
+        ctx.beginPath();
+        ctx.moveTo(110, h - 150);
+        ctx.lineTo(130, h - 110 + Math.sin(ticks * 0.05)*3);
+        ctx.lineTo(180, h - 60);
+        ctx.stroke();
+
+        // Coast Line on Right
+        ctx.strokeStyle = '#f4edd2';
+        ctx.beginPath();
+        ctx.moveTo(250, h - 50);
+        ctx.lineTo(380, h - 50); // Flat shore
+        ctx.lineTo(w, h - 120); // Coastal Cliff
+        ctx.stroke();
+
+        // Animated ocean rising
+        let waterHeight = h - 65 - Math.sin(ticks * 0.01) * 10;
+        ctx.fillStyle = 'rgba(244, 237, 210, 0.2)';
+        ctx.beginPath();
+        ctx.moveTo(200, h);
+        ctx.lineTo(200, waterHeight + 10);
+        // wavy surface
+        for(let x = 200; x <= w; x += 15) {
+            let wave = Math.sin((x * 0.05) + (ticks * 0.05)) * 3;
+            ctx.lineTo(x, waterHeight + wave);
+        }
+        ctx.lineTo(w, h);
+        ctx.closePath();
+        ctx.fill();
+
+        // Anchored labels
+        ctx.fillStyle = '#f4edd2';
+        ctx.font = '10px Courier Prime';
+        ctx.fillText("GLACIER MELT", 50, h - 235);
+        ctx.fillText("RISING OCEAN LEVEL", w - 160, waterHeight - 20);
+    }
+
+    // View III: Solutions
+    function drawSolutions() {
+        const cx = canvas.width / 2;
+        const cy = canvas.height / 2;
+        const w = canvas.width;
+        const h = canvas.height;
+
+        // Drawing a Windmill/Turbine Engraving
+        ctx.strokeStyle = '#f4edd2';
+        ctx.lineWidth = 1.5;
+        
+        // Tower
+        ctx.beginPath();
+        ctx.moveTo(cx - 10, h - 40);
+        ctx.lineTo(cx - 3, cy - 20);
+        ctx.lineTo(cx + 3, cy - 20);
+        ctx.lineTo(cx + 10, h - 40);
+        ctx.closePath();
+        ctx.stroke();
+
+        // Spin blades
+        let spinAngle = ticks * 0.02;
+        for(let i=0; i<3; i++) {
+            let angle = spinAngle + (i * Math.PI * 2 / 3);
+            ctx.beginPath();
+            ctx.moveTo(cx, cy - 20);
+            ctx.lineTo(cx + Math.cos(angle)*70, (cy - 20) + Math.sin(angle)*70);
+            ctx.stroke();
+        }
+
+        // Draw forest saplings on the floor
+        for(let i = 0; i < 5; i++) {
+            let fx = 40 + (i * 70);
+            if (fx > cx - 40 && fx < cx + 40) fx += 80; // keep distance from tower
+            let fy = h - 40;
+            
+            // Draw schematic tree
+            ctx.beginPath();
+            ctx.moveTo(fx, fy);
+            ctx.lineTo(fx, fy - 35);
+            ctx.stroke();
+            
+            // Pine triangle
+            ctx.beginPath();
+            ctx.moveTo(fx - 12, fy - 15);
+            ctx.lineTo(fx + 12, fy - 15);
+            ctx.lineTo(fx, fy - 40);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        // Decorative schematic rays (Clean Solar Energy) in sky
+        ctx.strokeStyle = 'rgba(244, 237, 210, 0.25)';
+        for(let i=0; i<6; i++) {
+            let xPos = 40 + (i * 100);
+            ctx.beginPath();
+            ctx.moveTo(xPos, 20);
+            ctx.lineTo(xPos + 30, 80);
+            ctx.stroke();
+        }
+
+        ctx.fillStyle = '#f4edd2';
+        ctx.font = '10px Courier Prime';
+        ctx.fillText("CLEAN KINETICS", cx - 45, cy + 90);
+        ctx.fillText("REFORESTATION", 50, h - 90);
+    }
+
+    // Helper for drawing arrowheads
+    function drawArrowhead(x, y, angle) {
+        let size = 6;
+        ctx.fillStyle = '#f4edd2';
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x - size * Math.cos(angle - Math.PI/6), y - size * Math.sin(angle - Math.PI/6));
+        ctx.lineTo(x - size * Math.cos(angle + Math.PI/6), y - size * Math.sin(angle + Math.PI/6));
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    // Canvas Loop
+    function update() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ticks++;
+
+        // Draw border inside canvas to enhance vintage framework
+        ctx.strokeStyle = 'rgba(244, 237, 210, 0.4)';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(5, 5, canvas.width - 10, canvas.height - 10);
+
+        if (currentView === 'cycle') {
+            drawGreenhouseCycle();
+        } else if (currentView === 'sealevel') {
+            drawSeaLevel();
+        } else if (currentView === 'solutions') {
+            drawSolutions();
+        }
+
+        animationFrameId = requestAnimationFrame(update);
+    }
+
+    // Start
+    update();
+</script>
+</body>
+</html>
