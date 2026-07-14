@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/avatars/1252452847962820699/786f76b53ded5a446ee3b3213759a96d.png">
-    <title>The Cosmic Chronicle</title>
+    <title>The Archival Ledger — Chronicles of the Known World</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=IM+Fell+English+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
         * {
             box-sizing: border-box;
@@ -17,31 +16,31 @@
             color: #1c1a16;
             font-family: 'Playfair Display', serif;
             margin: 0;
-            padding: 10px; /* Reduced for small mobile borders */
-            line-height: 1.4;
+            padding: 15px;
+            line-height: 1.45;
         }
 
         /* Newspaper Container */
         .container {
-            max-width: 1300px;
+            max-width: 1000px;
             margin: 0 auto;
             border: 4px double #1c1a16;
-            padding: 15px; /* Slightly tighter for mobile */
+            padding: 20px;
             background-color: #fbf6e3;
-            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            box-shadow: 0 0 25px rgba(0,0,0,0.18);
         }
 
         /* --- HEADER SECTION --- */
         header {
             text-align: center;
-            border-bottom: 5px solid #1c1a16;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            border-bottom: 5px double #1c1a16;
+            padding-bottom: 12px;
+            margin-bottom: 35px;
         }
 
         .meta-top {
             display: flex;
-            flex-direction: column; /* Stacked layout by default on tiny screens */
+            flex-direction: column;
             gap: 5px;
             font-family: 'Courier Prime', monospace;
             font-size: 0.8rem;
@@ -53,11 +52,12 @@
 
         h1.masthead {
             font-family: 'Cinzel Decorative', serif;
-            font-size: 2.2rem; /* Scaled down base for mobile */
+            font-size: 2.2rem;
             margin: 10px 0;
             letter-spacing: -1px;
             line-height: 1.1;
             word-wrap: break-word;
+            text-transform: uppercase;
         }
 
         .meta-bottom {
@@ -73,167 +73,89 @@
             margin-top: 10px;
         }
 
-        .price {
-            font-weight: bold;
-        }
-
-        .main-broadsheet {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column on mobile */
-            gap: 25px;
-        }
-
-        /* Column Lines Divider Technique */
-        .col {
-            padding: 0;
-        }
-
-        /* Typography Quirks */
-        h2.headline {
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-top: 0;
-            margin-bottom: 12px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        h3.subhead {
-            font-size: 1.1rem;
-            font-style: italic;
-            text-align: center;
-            margin-bottom: 15px;
-            color: #3a352a;
-        }
-
-        .drop-cap::first-letter {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 3.5rem; /* Slightly smaller for mobile layout scaling */
-            float: left;
-            margin-top: 4px;
-            margin-right: 8px;
-            line-height: 0.8;
-        }
-
-        p {
-            text-align: justify;
-            text-indent: 20px;
-            margin: 0 0 12px 0;
-            font-size: 1rem;
-        }
-
-        p.no-indent {
-            text-indent: 0;
-        }
-
-        .visual-center {
+        /* --- DIRECTORY LIST --- */
+        .ledger-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            gap: 30px;
         }
 
-        .canvas-frame {
-            border: 2px solid #1c1a16;
-            padding: 4px;
-            background: #1c1a16;
+        .ledger-item {
+            border: 1px solid #1c1a16;
+            padding: 20px;
+            background-color: #f6efe0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
-            width: 100%;
-            max-width: 600px;
         }
 
-        canvas {
-            display: block;
-            width: 100%;
-            height: 300px; /* Reduced default height to fit modern mobile screen viewports nicely */
-            background-color: #0d0c0a;
-            filter: sepia(0.3) contrast(1.2);
+        .ledger-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px #1c1a16;
         }
 
-        .caption {
+        .item-meta {
             font-family: 'Courier Prime', monospace;
             font-size: 0.8rem;
-            text-align: center;
-            margin-top: 8px;
-            font-style: italic;
-            border-bottom: 1px solid #1c1a16;
-            padding-bottom: 15px;
-            width: 100%;
-        }
-
-        /* Controls optimized for fingers */
-        .control-deck {
-            margin: 15px 0;
+            border-bottom: 1px dashed #1c1a16;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
             display: flex;
-            flex-wrap: wrap; /* Wraps cleanly if screen is too narrow */
-            gap: 8px;
-            justify-content: center;
-            width: 100%;
+            justify-content: space-between;
+            color: #5a5446;
         }
 
-        .vintage-btn {
+        h2.item-title {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 1.6rem;
+            margin: 0 0 8px 0;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        p.item-desc {
+            text-align: justify;
+            font-size: 0.95rem;
+            margin: 0 0 15px 0;
+            color: #2b2822;
+        }
+
+        /* Tactile Vintage Link Button */
+        .read-btn {
+            display: inline-block;
             background-color: #eaddbe;
             border: 2px solid #1c1a16;
             color: #1c1a16;
-            padding: 8px 12px; /* Enhanced touch padding */
+            padding: 8px 16px;
             font-family: 'IM Fell English SC', serif;
             font-size: 0.95rem;
-            cursor: pointer;
+            text-decoration: none;
             box-shadow: 2px 2px 0px #1c1a16;
             transition: all 0.1s ease;
-            flex-grow: 1; /* Helps layout stay uniform across mobile widths */
-            max-width: 200px;
-            text-align: center;
         }
 
-        .vintage-btn:active {
+        .read-btn:active {
             transform: translate(2px, 2px);
             box-shadow: 0px 0px 0px #1c1a16;
         }
 
-        .vintage-btn.active {
-            background-color: #1c1a16;
-            color: #f4edd2;
-        }
-
-        /* Advertisements & Side Features */
-        .advertisement {
-            border: 1px dashed #1c1a16;
-            padding: 15px;
+        /* --- FOOTER / NOTICE --- */
+        footer {
+            border-top: 1px solid #1c1a16;
+            margin-top: 40px;
+            padding-top: 15px;
             text-align: center;
-            margin-top: 25px;
-            background-color: #f2e7c4;
-        }
-
-        .adv-title {
             font-family: 'Courier Prime', monospace;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            font-size: 0.75rem;
+            color: #5a5446;
         }
 
-        /* --- RESPONSIVE TABLET & DESKTOP UPGRADES --- */
+        /* Responsive design scales */
         @media (min-width: 600px) {
-            body { padding: 20px; }
-            .container { padding: 20px; }
+            body { padding: 25px; }
+            .container { padding: 30px; }
             .meta-top { flex-direction: row; justify-content: space-between; }
             .meta-bottom { flex-direction: row; justify-content: space-between; }
-            h1.masthead { font-size: 3.5rem; }
-            canvas { height: 350px; }
-        }
-
-        @media (min-width: 950px) {
-            h1.masthead { font-size: 4.5rem; letter-spacing: -2px; }
-            h2.headline { font-size: 2.2rem; }
-            .main-broadsheet {
-                grid-template-columns: 1fr 2fr 1fr;
-                gap: 20px;
-            }
-            .col { padding: 0 10px; }
-            .col-left { border-right: 1px solid #1c1a16; }
-            .col-right { border-left: 1px solid #1c1a16; }
-            canvas { height: 400px; }
-            .vintage-btn { flex-grow: 0; }
+            h1.masthead { font-size: 3rem; }
         }
     </style>
 </head>
@@ -241,268 +163,58 @@
 
 <div class="container">
 
+    <!-- HEADER -->
     <header>
         <div class="meta-top">
-            <span>Weather: Cosmic Background Radiation Chilly (2.7K)</span>
-            <span>Special Scientific Broadside</span>
-            <span>No. 13,800,000,000</span>
+            <span>Location: The Reading Room Archives</span>
+            <span>A Catalogue of Scientific Sheets</span>
+            <span>ESTD. 1888</span>
         </div>
-        <h1 class="masthead">The Cosmic Chronicle</h1>
+        <h1 class="masthead">The Archival Ledger</h1>
         <div class="meta-bottom">
-            <span>LONDON & NEW YORK, TUESDAY</span>
-            <span style="font-size: 1.4rem; font-weight: bold; text-align: center;">THE UNIVERSE UNVEILED</span>
-            <span class="price">PRICE: ONE SHILLING</span>
+            <span>LONDON &amp; NEW YORK</span>
+            <span style="font-size: 1.3rem; font-weight: bold; text-align: center;">CHRONICLES OF THE KNOWN WORLD</span>
+            <span>GRATIS TO THE PUBLIC</span>
         </div>
     </header>
 
-    <main class="main-broadsheet">
+    <!-- DIRECTORY LIST -->
+    <main class="ledger-list">
 
-        <div class="col col-left">
-            <h2 class="headline">Great Fabric Formed!</h2>
-            <h3 class="subhead">How the Infinite Expanse Spun from Absolute Nothingness</h3>
-            <p class="drop-cap">It was standard belief for generations that the heavens stood firm and unmoving. Yet, modern dynamic philosophy reveals a grander truth: the cosmos is actively expanding, tearing outwards into a void of its own creation.</p>
-            <p>Every star, cluster, and celestial engine we observe today was once compressed into an atomic pinprick of unfathomable heat. When this cosmic egg ruptured, space itself unfurled.</p>
-            <p>Galaxies are not flying away through space; rather, the fabric between them is stretching like elastic cloth, pushing our neighbors further into the dark horizon.</p>
-            
-            <div class="advertisement">
-                <div class="adv-title">- ADVERTISEMENT -</div>
-                <strong style="font-family: 'IM Fell English SC', serif; font-size: 1.2rem;">Dr. Kepler’s Celestial Spyglasses</strong>
-                <p class="no-indent" style="font-size:0.85rem; text-align:center; margin-top:5px;">Observe Saturn’s Rings from your own parlor! Hand-ground lenses. Direct from London manufacturers.</p>
+        <!-- Entry 1: The Cosmic Chronicle -->
+        <article class="ledger-item">
+            <div class="item-meta">
+                <span>VOL. I — NO. 13,800,000,000</span>
+                <span>COSMIC RADIATION CHILLY (2.7K)</span>
             </div>
-        </div>
+            <h2 class="item-title">The Cosmic Chronicle</h2>
+            <p class="item-desc">
+                An investigation into the stretching canvas of the infinite expanse. This sheet contains dynamic calculations detailing the sudden rupture of the cosmic egg, the intricate orbital mechanics of our Solar system, and the ghostly invisible scaffolding known to philosophers as "Dark Matter."
+            </p>
+            <a href="newspapers/cosmic.html" class="read-btn">Inspect Broadside &rarr;</a>
+        </article>
 
-        <div class="col visual-center">
-            <h2 class="headline" style="letter-spacing: -1px;">An Illustrated Orrery of the Infinite</h2>
-            <h3 class="subhead">Interactive engraving demonstrating structural systems of the cosmos.</h3>
-            
-            <div class="control-deck">
-                <button class="vintage-btn active" onclick="switchView('solar')">I. Solar Orrery</button>
-                <button class="vintage-btn" onclick="switchView('galaxy')">II. Nebula Spiral</button>
-                <button class="vintage-btn" onclick="switchView('cosmos')">III. Great Filament Web</button>
+        <!-- Entry 2: The Global Warming Chronicle -->
+        <article class="ledger-item">
+            <div class="item-meta">
+                <span>VOL. II — NO. 2026.07</span>
+                <span>ERRATIC &amp; UNSEASONABLY WARM</span>
             </div>
-
-            <div class="canvas-frame">
-                <canvas id="cosmicCanvas"></canvas>
-            </div>
-            <div class="caption" id="canvasCaption">
-                Fig. 1 — A mechanical rendering of our immediate Sun-centric system, demonstrating the orbital mechanics calculated by Mr. Isaac Newton.
-            </div>
-
-            <br>
-            <p class="no-indent">Observers may change the schematic viewpoints by clicking the mechanical toggle buttons above. The diagram mimics the hand-etched ink drawings of the Royal Astronomical Society, capturing the rhythmic kinetics that govern all atomic and cosmic architecture.</p>
-        </div>
-
-        <div class="col col-right">
-            <h2 class="headline">Dark Matters</h2>
-            <h3 class="subhead">The Unseen Scaffolding Holding the Milky Way United</h3>
-            <p class="drop-cap">To gaze upon the night sky is to glimpse mere foam on a deep, invisible ocean. Mathematical measurements of galactic rotations reveal an unsettling anomaly: there is not enough visible mass to hold the structures intact.</p>
-            <p>By all laws of centrifugal physics, the spinning arms of our Great Nebula should fray and hurl stars wildly into the deep abyss. Yet they hold fast.</p>
-            <p>Philosophers now deduce a ghost framework—"Dark Matter"—an invisible, heavy substance weaving between stars, casting gravitational nets that anchor whole universes together without ever reflecting a single ray of light.</p>
-            <p>Where this material hides, and what ether constructs it, remains the supreme enigma of our contemporary age.</p>
-        </div>
+            <h2 class="item-title">The Global Warming Chronicle</h2>
+            <p class="item-desc">
+                A serious examination of our changing terrestrial envelope. This edition addresses the greenhouse paradox trapping our planet's vital heat, the silent rising of our salt seas, and the monumental industrial footprint altering the very thermostat of the globe.
+            </p>
+            <a href="newspapers/global-warming.html" class="read-btn">Inspect Broadside &rarr;</a>
+        </article>
 
     </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Printed &amp; Compiled by Hand. All rights reserved. Please return sheets to the desk after reading.</p>
+    </footer>
+
 </div>
-
-<script>
-    const canvas = document.getElementById('cosmicCanvas');
-    const ctx = canvas.getContext('2d');
-    const caption = document.getElementById('canvasCaption');
-    
-    let currentView = 'solar';
-    let animationFrameId;
-    let ticks = 0;
-
-    // Handle resizing beautifully across devices
-    function resizeCanvas() {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        canvas.width = rect.width - 10; // offset padding
-        // Preserve variable height scaling based on window width
-        if (window.innerWidth < 600) {
-            canvas.height = 300;
-        } else if (window.innerWidth < 950) {
-            canvas.height = 350;
-        } else {
-            canvas.height = 400;
-        }
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    // Change Views and Update Buttons
-    function switchView(viewType) {
-        currentView = viewType;
-        document.querySelectorAll('.vintage-btn').forEach(btn => btn.classList.remove('active'));
-        
-        if(viewType === 'solar') {
-            document.querySelectorAll('.vintage-btn')[0].classList.add('active');
-            caption.innerText = "Fig. 1 — A mechanical rendering of our immediate Sun-centric system, demonstrating the orbital mechanics calculated by Mr. Isaac Newton.";
-        } else if(viewType === 'galaxy') {
-            document.querySelectorAll('.vintage-btn')[1].classList.add('active');
-            caption.innerText = "Fig. 2 — An idealized diagram of the Milky Way galaxy, tracing the density waves where new suns are continuously forged from dust.";
-        } else if(viewType === 'cosmos') {
-            document.querySelectorAll('.vintage-btn')[2].classList.add('active');
-            caption.innerText = "Fig. 3 — The Observable Universe at grand scale, revealing a nervous-system-like web of galaxy filaments divided by immense, hollow voids.";
-        }
-    }
-
-    // --- DRAWING FUNCTIONS (Etched Chalk/Ink Aesthetic) ---
-    function drawSolarSystem() {
-        const cx = canvas.width / 2;
-        const cy = canvas.height / 2;
-        
-        // Draw Central Sun
-        ctx.fillStyle = '#f4edd2';
-        ctx.beginPath();
-        ctx.arc(cx, cy, 14, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.strokeStyle = '#f4edd2';
-        ctx.lineWidth = 1;
-        // Sunburst rays
-        for(let i=0; i<8; i++) {
-            let angle = (i * Math.PI / 4) + ticks * 0.01;
-            ctx.beginPath();
-            ctx.moveTo(cx + Math.cos(angle)*18, cy + Math.sin(angle)*18);
-            ctx.lineTo(cx + Math.cos(angle)*25, cy + Math.sin(angle)*25);
-            ctx.stroke();
-        }
-
-        // Draw Orbits & Planets (Dynamically scaled orbit sizing for mobile widths)
-        const scaleFactor = Math.min(canvas.width / 500, 1);
-        const orbits = [55 * scaleFactor, 95 * scaleFactor, 140 * scaleFactor, 185 * scaleFactor];
-        const speeds = [0.04, 0.02, 0.012, 0.007];
-        const radii = [3, 4, 6, 5];
-
-        orbits.forEach((dist, idx) => {
-            // Orbit Ring
-            ctx.strokeStyle = 'rgba(244, 237, 210, 0.15)';
-            ctx.setLineDash([4, 4]);
-            ctx.beginPath();
-            ctx.arc(cx, cy, dist, 0, Math.PI*2);
-            ctx.stroke();
-            ctx.setLineDash([]);
-
-            // Planet Position
-            let angle = ticks * speeds[idx];
-            let px = cx + Math.cos(angle) * dist;
-            let py = cy + Math.sin(angle) * dist;
-
-            ctx.fillStyle = '#f4edd2';
-            ctx.beginPath();
-            ctx.arc(px, py, radii[idx], 0, Math.PI*2);
-            ctx.fill();
-
-            // Draw vintage orbit tails
-            ctx.strokeStyle = 'rgba(244, 237, 210, 0.4)';
-            ctx.beginPath();
-            ctx.arc(cx, cy, dist, angle - 0.4, angle);
-            ctx.stroke();
-        });
-    }
-
-    function drawGalaxy() {
-        const cx = canvas.width / 2;
-        const cy = canvas.height / 2;
-        const arms = 2;
-        const particlesPerArm = 180;
-
-        ctx.fillStyle = 'rgba(244, 237, 210, 0.6)';
-        
-        for (let i = 0; i < arms; i++) {
-            for (let j = 0; j < particlesPerArm; j++) {
-                let factor = j / particlesPerArm;
-                let angle = factor * 5 + (i * Math.PI) + (ticks * 0.005);
-                let distance = factor * (canvas.height / 2.2);
-                
-                let jitterX = (Math.sin(j * 432.12) * 12) * (factor + 0.1);
-                let jitterY = (Math.cos(j * 123.45) * 12) * (factor + 0.1);
-
-                let x = cx + Math.cos(angle) * distance + jitterX;
-                let y = cy + Math.sin(angle) * distance + jitterY;
-
-                let size = (j % 5 === 0) ? 1.5 : 0.8;
-                
-                ctx.beginPath();
-                ctx.arc(x, y, size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        // Glowing core
-        ctx.fillStyle = 'rgba(244, 237, 210, 0.2)';
-        ctx.beginPath();
-        ctx.arc(cx, cy, 30, 0, Math.PI*2);
-        ctx.fill();
-    }
-
-    // Generate static nodes once for Cosmic Web
-    const webNodes = [];
-    for(let i=0; i<45; i++) {
-        webNodes.push({
-            x: Math.random(),
-            y: Math.random(),
-            pulseOffset: Math.random() * Math.PI
-        });
-    }
-
-    function drawCosmicWeb() {
-        const w = canvas.width;
-        const h = canvas.height;
-
-        ctx.strokeStyle = 'rgba(244, 237, 210, 0.12)';
-        ctx.lineWidth = 1;
-        
-        for(let i=0; i<webNodes.length; i++) {
-            let n1 = webNodes[i];
-            let x1 = n1.x * w;
-            let y1 = n1.y * h;
-
-            for(let j=i+1; j<webNodes.length; j++) {
-                let n2 = webNodes[j];
-                let x2 = n2.x * w;
-                let y2 = n2.y * h;
-
-                let dist = Math.hypot(x1 - x2, y1 - y2);
-                if(dist < 90) {
-                    ctx.beginPath();
-                    ctx.moveTo(x1, y1);
-                    ctx.lineTo(x2, y2);
-                    ctx.stroke();
-                }
-            }
-        }
-
-        ctx.fillStyle = '#f4edd2';
-        webNodes.forEach(node => {
-            let x = node.x * w;
-            let y = node.y * h;
-            let pulse = Math.sin(ticks * 0.02 + node.pulseOffset) * 0.8 + 1.5;
-
-            ctx.beginPath();
-            ctx.arc(x, y, pulse, 0, Math.PI * 2);
-            ctx.fill();
-        });
-    }
-
-    // loop
-    function update() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ticks++;
-
-        if (currentView === 'solar') {
-            drawSolarSystem();
-        } else if (currentView === 'galaxy') {
-            drawGalaxy();
-        } else if (currentView === 'cosmos') {
-            drawCosmicWeb();
-        }
-
-        animationFrameId = requestAnimationFrame(update);
-    }
-
-    // Kickstart
-    update();
-</script>
 
 </body>
 </html>
